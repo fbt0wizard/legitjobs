@@ -18,6 +18,7 @@
                 </div>
                 <div class="password">
                     <input type="password" name="password" id="password" placeholder="Password" required>
+                    <input type="checkbox" name="viewPass" id="view">
                 </div>
                 <div class="submit-btn">
                     <button type="submit" name="sumit">Submit</button>
