@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: sans-serif; */
+    font-family: roboto;
+}
+
+/* styling the nav bar  */
+
+.navbar {
+    height: 59px;
+    width: 100%;
+    border-bottom: 1px solid rgb(121, 121, 121);
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+.navbar h3 {
+    font-size: 26px;
+    color: #008080;
+    padding-left: 27px;
+    padding-top: 13px;
+    width: max-content;
+}
+
+.navbar a {
+    font-family: 'Open Sans', sans-serif;
+    float: right;
+    margin-right: 1rem;
+    text-decoration: none;
+    font-size: 19px;
+    color: grey;
+    margin-top: -14px;
+    transition: all .3s ease-in-out;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #008080;
+}
+
+/* styling the left side bar */
+
+.sidenav {
+    padding-top: 52px;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #008080;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 41px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #fff;
+    display: block;
+    transition: all .2s ease-in-out;
+}
+
+.sidenav a:hover {
+    text-decoration: underline;
+    background: gray;
+}
+
+/* styling the main container */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    padding: 10px;
+    margin-top: 1rem;
+}
+
+.main-container > div {
+    /* text-align: center; */
+    padding: 20px 0;
+    /* font-size: 30px; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* styling job post section */
+.section-name {
+    color: #008080;
+    font-size: 26px;
+    text-align: center;
+}
+.job-post {
+    min-height: 85vh;
+}
+.description {
+    margin-top: 2rem;
+}
+.desc label {
+    font-size: 13px;
+    color: #242424;
+}
+
+.text-area {
+    margin-top: 2rem;
+}
+
+fieldset label {
+    font-size: 13px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color: rgb(43, 43, 43);
+    margin-bottom: .6rem;
+}
+
+.new-job {
+    color: #fff;
+    padding: 7px 18px;
+    /* border: 1px solid green; */
+    background: rgb(58, 167, 58);
+    border-radius: 6px;
+    margin: .5rem auto;
+    font-size: 14px;
+    width: max-content;
+}
+
+.input input {
+    width: 38%;
+    height: 31px;
+    border: 1px solid #008080;
+    border-radius: 6px;
+    margin-left: 4px;
+    font-size: 15px;
+}
+.input input:focus {
+    outline: none;
+    background-color: #008080;
+    color: #fff;
+    font-size: 17px;
+}
+.desc {
+    margin-left: 4%;
+}
+
+.input select, .input-2 select {
+    width: 38%;
+    margin-top: 13px;
+    height: 31px;
+    background: #008080;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 17px;
+}
+#jobType {
+    margin-left: 26px;
+}
+
+#qualification {
+    margin-left: 3px;
+}
+  
+#experience {
+    margin-left: 13px;
+}
+
+.post-btn {
+    padding: 7px 50px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #008080;
+    border: 1px solid #008080;
+    border-radius: 3px;
+    float: right;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+.post-btn:hover {
+    background-color: #fff;
+    color: #008080;
+}

@@ -1,0 +1,68 @@
+@import "/legitjobs/css/basic.css";
+
+body {
+    background-color: #008080;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.flex-container > div {
+    background-color: #f1f1f1;
+    width: max-content;
+    margin-top: 10vh;
+    width: 44%;
+    border-radius: 4px;
+}
+
+.heading {
+    font-size: 26px;
+    border-bottom: 2px solid #008080;
+    padding: 10px 9px;
+    color: #008080;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+    line-height: 59px;
+    margin-top: 25px;
+}
+
+input {
+    width: 42%;
+    margin: 15px;
+    width: 42%;
+    margin: 15px;
+    border: 1px solid #008080;
+    height: 34px;
+    border-radius: 4px;
+    color: #4d4d4d;
+    padding-left: 12px;
+}
+
+input:focus {
+    outline: none;
+    background-color: #008080;
+    color: #fff;
+    font-size: 14px;
+}
+
+form button {
+    font-size: 20px;
+    padding: 7px 47px;
+    background-color: #008080;
+    border: 1px solid #008080;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+form button:hover {
+    background-color: #fff;
+    color: #008080;
+}

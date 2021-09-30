@@ -1,0 +1,276 @@
+@import "/legitjobs/css/basic.css";
+
+/* Styling for grid containera */
+
+.grid-container {
+    display: grid;
+    border-bottom: 1px solid #000;
+    padding-top: 100px;
+    background-image: url("/legitjobs/images/newbanner.png");
+    background-size: 100%;
+}
+
+.grid-item-search {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+/* Styleing Search bar  */
+
+.grid-item-search input {
+    padding: 15px 0px 15px 6px;
+    width: 31%;
+    border: 1px solid rgb(48, 48, 48);
+    border-radius: 3px;
+    font-size: 17px;
+    padding: 14px 11px;
+}
+
+.grid-item-search input:focus {
+    outline: none;
+    background-color: #008080;
+    border: none;
+    color: #fff;
+}
+
+.grid-item-search i {
+    color: #008080;
+    margin: 0px 5px 0px 5px;
+    font-size: 43px;
+}
+
+/* input::placeholder {
+    font-size: 1.2em;
+} */
+
+.search {
+    border: none;
+    margin-left: 1px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.search i {
+    padding: 6.5px 20px 15.9px 20px;
+    font-size: 25px;
+    background-color: #008080;
+    border: 1px solid #008080;
+    border-radius: 5px;
+    color: #fff;
+}
+.search i:hover {
+    background-color: #fff;
+    color: #008080;
+}
+
+
+.hero {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 2rem;
+}
+
+.star {
+    color: #ffff00;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+
+/* styling the right side card */
+
+.card-right {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 20%;
+    height: 150px;
+    border-radius: 5px;
+    margin-left: 1%;
+    float: left;
+    max-height: 315px;
+    min-height: 150px;
+}
+
+.side-links {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 28px;
+    text-align: start;
+    margin-left: 23px;
+}
+
+.side-links a {
+    text-decoration: underline;
+    color: #008080;
+    font-size: 14px;
+}
+
+
+/* styling the newslettewr container */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 25%;
+    float: right;
+    display: grid;
+    text-align: center;
+    border-radius: 5px;
+    max-height: 315px;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.card input {
+    margin: auto;
+    width: 85%;
+    border-radius: 7px;
+    height: 36px;
+    border: 1px solid #000;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.card input:focus {
+    outline: none;
+    background-color: #008080;
+    border: none;
+    color: #fff;
+}
+
+.card h3 {
+    margin-bottom: 37px;
+    font-size: 24px;
+    color: #008080;
+    padding-top: 1.5rem;
+}
+
+.update-btn {
+    width: max-content;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 19px;
+    color: #fff;
+    padding: 12px 15px;
+    background-color: #008080;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    border: none;
+    font-size: 17px;
+    border: 1px solid #008080;
+    transition: all .3s ease-in-out;
+}
+.update-btn:hover {
+    background-color: #fff;
+    color: #008080;
+}
+
+.container p {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    color: #686868;
+}
+
+
+/* Styling the job container */
+
+.card-2 {
+    width: 50%;
+    text-align: start;
+    line-height: 22px;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+.card-2 h3 {
+    padding-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.location {
+    margin-bottom: 3px;
+    color: #686868;
+}
+
+.apply-now {
+    margin-bottom: 3px;
+}
+
+.apply-now a {
+    text-decoration: none;
+    color: blue;
+}
+
+.apply-now i {
+    font-size: 15px;
+    margin-right: 4px;
+}
+
+.company-name {
+    color: #008080;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.company-details {
+    color: #333;
+    font-size: 15px;
+    padding-bottom: 2rem;
+}
+
+.date {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 3px;
+    color: #333;
+}
+
+.posted-job-1 {
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: start;
+    padding-left: 1.5rem;
+    border-radius: 5px;
+    line-height: 22px;
+    padding-right: 1.5rem;
+    margin-bottom: 2rem;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+
+/* styling the footer */
+
+footer {
+    text-align: center;
+    height: 80px;
+    /* background-color: #008080; */
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links p {
+    margin: 7px;
+    font-size: 27px;
+}
+
+.facebook {
+    color: #4267B2;
+}
+
+.linkedin {
+    color: #0e76a8;
+}
+
+.twitter {
+    color: #1DA1F2;
+}

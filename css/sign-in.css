@@ -1,0 +1,33 @@
+@import "/legitjobs/css/basic.css";
+@import "/legitjobs/css/sign-up.css";
+
+.flex-container > div {
+    margin-top: 15vh;
+}
+
+.success {
+    color: green;
+    padding: 14px 12px;
+    border: 1px solid green;
+    background: #fff;
+    border-radius: 6px;
+    width: max-content;
+    margin: auto;
+    margin-bottom: auto;
+    margin-bottom: 2rem;
+    line-height: 0;
+}
+
+.error {
+    color: red;
+    padding: 14px 12px;
+    border: 1px solid red;
+    background: #fff;
+    border-radius: 6px;
+    margin-top: 1rem;
+    line-height: 0;
+    width: max-content;
+    margin: auto;
+    margin-bottom: auto;
+    margin-bottom: 2rem;
+}
