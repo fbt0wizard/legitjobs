@@ -49,6 +49,14 @@ input:focus {
     color: #fff;
     font-size: 14px;
 }
+/* .password {
+    display: flex;
+}
+.password input {
+
+} */
+
+
 
 form button {
     font-size: 20px;
@@ -59,10 +67,78 @@ form button {
     color: #fff;
     cursor: pointer;
     transition: all .3s ease-in-out;
-    margin-bottom: 2rem;
 }
 
 form button:hover {
     background-color: #fff;
     color: #008080;
 }
+
+.reg-error{
+    line-height: 0px;
+    text-align: start;
+    font-size: 12px;
+    color: red;
+    margin-left: 5%;
+    width: max-content;
+}
+.reg-good {
+    line-height: 0px;
+    text-align: start;
+    font-size: 12px;
+    color: green;
+    margin-left: 5%;
+}
+.pass-match {
+    font-size: 12px;
+    color: green;
+    line-height: 0;
+    margin-left: 23.3%;
+}
+.pass-not {
+    font-size: 12px;
+    color: red;
+    line-height: 0;
+    margin-left: 53.3%;
+    width: max-content;
+}
+
+.error {
+    color: red;
+    padding: 14px 12px;
+    border: 1px solid red;
+    background: #fff;
+    border-radius: 6px;
+    margin-top: 1rem;
+    line-height: 0;
+    width: max-content;
+    margin: auto;
+    margin-bottom: auto;
+    margin-bottom: 2rem;
+    font-size: 13px;
+}
+
+.last-name {
+    font-size: 12px;
+    color: red;
+    line-height: 0;
+    margin-left: 23.3%;
+}
+
+.already {
+    color: #008080;
+    font-size: 15px;
+}
+.already a {
+    text-decoration: none;
+}
+
+/* .passerror {
+    display: none;
+} */
+
+/* @media screen and (max-width: 908px) {
+    .passerror {
+        display: block;
+    }
+  } */

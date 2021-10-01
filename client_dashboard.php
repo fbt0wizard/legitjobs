@@ -14,13 +14,13 @@ if (isset($_SESSION['username'])) {
     <title></title>
 </head>
 <body>
-    <h1> <?php echo $_SESSION['username']; ?>, you registered</h1> <a href="/legitjobs/client_logout.php">Logout</a>
+    <h1> <?php echo $_SESSION['first_name']; ?>, you registered</h1> <a href="/legitjobs/client_logout.php">Logout</a>
 </body>
 </html>
 
 <?php
 } else {
-  header("Location: sign_in.php");
+  header("Location: sign_in.php?error=Please sign in");
   exit();
 }
 ?>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <link rel="stylesheet" href="/legitjobs/css/sign-in.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 </head>
 <body>
 <div class="flex-container">
@@ -18,7 +19,7 @@
                 </div>
                 <div class="password">
                     <input type="password" name="password" id="password" placeholder="Password" required>
-                    <!-- <input type="checkbox" name="viewPass" id="view"> -->
+                    <i class="bi bi-eye-slash" id="togglePassword"></i>
                 </div>
                 <div class="submit-btn">
                     <button type="submit" name="sumit">Submit</button>
@@ -33,5 +34,7 @@
             </form>
         </div>
     </div>
+
+    <script src="/legitjobs/js/client_login.js"></script>
 </body>
 </html>

@@ -31,3 +31,12 @@
     margin-bottom: auto;
     margin-bottom: 2rem;
 }
+
+.password i {
+    margin-left: -39px;
+    cursor: pointer;
+}
+
+.password input {
+    margin-left: -4px;
+}
