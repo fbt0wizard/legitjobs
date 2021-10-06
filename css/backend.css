@@ -84,9 +84,5 @@ form button:hover {
 
 .error {
   color: red;
-  padding: 7px 0px;
-  border: 1px solid red;
-  background: #fff;
-  border-radius: 6px;
   margin-top: 1rem;
 }

@@ -1,0 +1,398 @@
+@import "/legitjobs/css/basic.css";
+@import "/legitjobs/css/footer.css";
+@import "/legitjobs/css/echo_content.css";
+
+.item1 {
+  grid-area: header;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header header header header header header";
+}
+
+/* .grid-container > div {
+  font-size: 30px;
+} */
+
+
+/* styling the nav bar */
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  box-shadow: #008080 0px 2px 61px 0px;
+}
+
+.flex-nav-left {
+  flex: 20%;
+  line-height: 0;
+}
+
+.flex-nav-middle {
+  flex: 60%;
+  line-height: 0;
+}
+
+.flex-nav-right {
+  flex: 30%;
+  line-height: 0;
+}
+
+.logoimg {
+  width: 62px;
+}
+
+.nav-links {
+  padding: 25px 0;
+}
+
+.nav-links a {
+  margin: 2%;
+  font-size: 19px;
+  text-decoration: none;
+  color: #008080;
+  padding: 32px 21px;
+}
+
+.sign-in {
+  margin: 28px 0;
+}
+
+.sign-in a {
+  text-decoration: none;
+  color: #fff;
+  background: #008080;
+  padding: 12px;
+  border: 1px solid #008080;
+  margin: 1%;
+  font-size: 16px;
+  border-radius: 4px;
+  line-height: 0;
+  background: linear-gradient(to right, #fff 50%, #008080 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .4s ease-out;
+}
+
+.sign-in a:hover {
+  background-position: left bottom;
+  color: #008080;
+}
+
+.nav-links a:hover {
+  background: #008080;
+  color: #fff;
+}
+/* Styleing Search bar  */
+
+.search-item1 {
+    grid-area: search;
+}
+  
+.grid-search-container {
+    display: grid;
+    grid-template-areas: "search search search search search search";
+    height: 110px;
+    background-image: url("/legitjobs/images/newbanner.png");
+    background-size: 100%;
+    border-bottom: 1px solid #008080;
+}
+  
+.grid-search-container > div {
+    text-align: center;
+    font-size: 30px;
+}
+
+.search-container {
+    width: 100%;
+    margin: 24px 0;
+}
+
+.grid-item-search {
+    text-align: center;
+}
+
+.grid-item-search input {
+    width: 31%;
+    border: 1px solid #008080;
+    border-radius: 3px;
+    font-size: 17px;
+    padding: 14px 11px;
+}
+
+.grid-item-search input:focus {
+    outline: none;
+    background-color: #008080;
+    border: none;
+    color: #fff;
+}
+
+.grid-item-search i {
+    color: #008080;
+    margin: 0px 5px 0px 5px;
+    font-size: 43px;
+}
+
+.search {
+    border: none;
+    margin-left: 1px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.search i {
+    padding: 6.5px 20px 15.9px 20px;
+    font-size: 25px;
+    background-color: #008080;
+    border: 1px solid #008080;
+    border-radius: 5px;
+    color: #fff;
+}
+.search i:hover {
+    background-color: #fff;
+    color: #008080;
+}
+
+/* styling the flex container  */
+.flex-container {
+  display: flex;
+  font-size: 10px;
+  text-align: center;
+}
+
+.flex-item-left {
+  padding: 10px;
+  flex: 30%;
+  max-height: 213px;
+}
+
+.flex-item-middle {
+  padding: 10px;
+  flex: 60%;
+}
+
+.flex-item-right {
+  padding: 10px;
+  flex: 30%;
+  min-width: 236px;
+  max-height: 315px;
+  height: 333px;
+}
+
+/* styling the newslettewr container */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  float: right;
+  display: grid;
+  text-align: center;
+  border-radius: 5px;
+  max-height: 315px;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.card input {
+  margin: auto;
+  width: 85%;
+  border-radius: 7px;
+  height: 36px;
+  border: 1px solid #000;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.card input:focus {
+  outline: none;
+  background-color: #008080;
+  border: none;
+  color: #fff;
+}
+
+.card h3 {
+  font-size: 19px;
+  color: #008080;
+  padding-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.update-btn {
+  width: max-content;
+  margin: 0.5rem auto 2.5rem auto;
+  font-size: 19px;
+  color: #fff;
+  padding: 10px 17px;
+  background-color: #008080;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  border: 1px solid #008080;
+  transition: all 0.3s ease-in-out;
+}
+.update-btn:hover {
+  background-color: #fff;
+  color: #008080;
+}
+
+.container p {
+  font-size: 12px;
+  margin-bottom: 1rem;
+  color: #686868;
+}
+
+/* styling the right side card */
+
+.card-right {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin-left: 1%;
+  float: left;
+  max-height: 315px;
+  min-height: 150px;
+}
+
+.side-links {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 28px;
+  text-align: start;
+  margin-left: 23px;
+}
+
+.side-links a {
+  text-decoration: underline;
+  color: #008080;
+  font-size: 14px;
+}
+
+/* Styling the job center */
+
+.card-2 {
+    width: 100%;
+    text-align: start;
+    line-height: 22px;
+}
+
+.card-2 h3 {
+    padding-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.location {
+    margin-bottom: 3px;
+    color: #686868;
+    font-size: 17px;
+}
+
+.apply-now {
+    margin-bottom: 3px;
+}
+
+.apply-now a {
+    text-decoration: none;
+    color: blue;
+}
+
+.apply-now i {
+    font-size: 15px;
+    margin-right: 4px;
+}
+
+.company-name {
+    color: #008080;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 3px;
+    margin-bottom: 10px;
+}
+
+.company-details {
+    color: #626262;
+    font-size: 15px;
+    /* padding-bottom: 2rem; */
+}
+.company-details p {
+    color: #626262;
+    font-size: 15px;
+    /* padding-bottom: 2rem; */
+}
+
+.date {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 3px;
+    color: #333;
+}
+
+.posted-job-1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: start;
+    padding-left: 1.5rem;
+    border-radius: 5px;
+    line-height: 22px;
+    padding-right: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    font-size: 14px;
+    color: #373737;
+}
+
+@media (max-width: 1077px) {
+  .card {
+    line-height: 0px;
+  }
+  .card h3 {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .card input {
+    height: 29px;
+  }
+  .update-btn {
+    font-size: 13px;
+    margin-bottom: 1.5rem;
+    padding: 0px 17px;
+  }
+  .container p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+}
+
+@media (max-width: 800px) {
+    .flex-item-right, .flex-item-left, .flex-item-middle {
+      flex: 100%;
+    }
+    .flex-container {
+    flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 670px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    display: grid;
+    line-height: 0px;
+  }
+
+  .flex-nav-left {
+    background-color: #fff;
+  }
+  
+  .flex-nav-middle, .flex-nav-right {
+    transform: translateY(-100%);
+    z-index: -1;
+  }
+}

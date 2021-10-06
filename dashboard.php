@@ -2,6 +2,7 @@
 session_start();
 
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+  
 
 ?>
 
@@ -18,9 +19,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link rel="stylesheet" href="./css/info.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/widgContent.css" />
+    <!-- <link rel="stylesheet" href="./css/richtext.min.css" /> -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- <link href="https://cdn.quilljs.com/1.1.3/quill.snow.css" rel="stylesheet"> -->
-    <?php include("engine.php") ?>
   </head>
 
   <body>
@@ -36,7 +36,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <div class="main">
       <div class="navbar">
         <h3>Hello, <?php echo $_SESSION['name']; ?></h3>
-        <a href="logout.php"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>Logout</a>
+        <a href="/legitjobs/engine/logout.php"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>Logout</a>
       </div>
       <div class="main-container">
         <div class="job-post" id="jobPost">
@@ -45,60 +45,90 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <div class="desc">
               <div class="input">
                 <label for="heading">Job Heading:</label>
-                <input type="text" name="heading"> <br>
+                <input type="text" name="heading" id="heading"> <br>
+
+                <label for="jon-tittle">Job Title:</label>
+                <input type="text" name="job-tittle" id="tittle"> <br>
+
+                <label for="job-field">Job field:</label>
+                <input type="text" name="job-field" id="jobField"> <br>
 
                 <label for="experience">Experience:</label>
                 <select id="experience" name="experience">
-                <option value="">Select</option>
-                <option value="None">None</option>
-                <option value="1 year">1 year</option>
-                <option value="2 year">2 year</option>
-                <option value="3 year">3 year</option>
-                <option value="4 year">4 year</option>
-                <option value="5 year">5 year</option>
-                <option value="6 year">6 year</option>
-                <option value="7 year">7 year</option>
-                <option value="8 year">8 year</option>
-                <option value="9 year">9 year</option>
-                <option value="10 year">10 year</option>
-                <option value="11 year">11 year</option>
-                <option value="12 year">12 year</option>
-                <option value="13 year">13 year</option>
-                <option value="14 year">14 year</option>
-                <option value="15 year">15 year</option>
-                <option value="16 year">16 year</option>
-                <option value="17 year">17 year</option>
-                <option value="18 year">18 year</option>
-                <option value="19 year">19 year</option>
-                <option value="20 year">20 year</option>
+                  <option value="">Select</option>
+                  <option value="None">None</option>
+                  <option value="1 year">1 year</option>
+                  <option value="2 years">2 years</option>
+                  <option value="3 years">3 years</option>
+                  <option value="4 years">4 years</option>
+                  <option value="5 years">5 years</option>
+                  <option value="6 years">6 years</option>
+                  <option value="7 years">7 years</option>
+                  <option value="8 years">8 years</option>
+                  <option value="9 years">9 years</option>
+                  <option value="10 years">10 years</option>
+                  <option value="11 years">11 years</option>
+                  <option value="12 years">12 years</option>
+                  <option value="13 years">13 years</option>
+                  <option value="14 years">14 years</option>
+                  <option value="15 years">15 years</option>
+                  <option value="16 years">16 years</option>
+                  <option value="17 years">17 years</option>
+                  <option value="18 years">18 years</option>
+                  <option value="19 years">19 years</option>
+                  <option value="20 years">20 years</option>
+                </select> 
+                
+                <select id="experienceTo" name="experience">
+                  <option value="">Select</option>
+                  <option value="None">None</option>
+                  <option value="to 2 years">to 2 years</option>
+                  <option value="to 3 years">to 3 years</option>
+                  <option value="to 4 years">to 4 years</option>
+                  <option value="to 5 years">to 5 years</option>
+                  <option value="to 6 years">to 6 years</option>
+                  <option value="to 7 years">to 7 years</option>
+                  <option value="to 8 years">to 8 years</option>
+                  <option value="to 9 years">to 9 years</option>
+                  <option value="to 10 years">to 10 years</option>
+                  <option value="to 11 years">to 11 years</option>
+                  <option value="to 12 years">to 12 years</option>
+                  <option value="to 13 years">to 13 years</option>
+                  <option value="to 14 years">to 14 years</option>
+                  <option value="to 15 years">to 15 years</option>
+                  <option value="to 16 years">to 16 years</option>
+                  <option value="to 17 years">to 17 years</option>
+                  <option value="to 18 years">to 18 years</option>
+                  <option value="to 19 years">to 19 years</option>
+                  <option value="to 20 years">to 20 years</option>
                 </select> <br>
 
                 <label for="qualification">Qualification:</label>
                 <select id="qualification" name="qualification">
-                <option value="">Select</option>
-                <option value="SSCE">SSCE</option>
-                <option value="OND">OND</option>
-                <option value="NCE">NCE</option>
-                <option value="BA/BSc/HND">BA/BSc/HND</option>
-                <option value="MBA/MSc/MA">MBA/MSc/MA</option>
-                <option value="Expatriate Job">Expatriate Job</option>
+                  <option value="">Select</option>
+                  <option value="SSCE">SSCE</option>
+                  <option value="OND">OND</option>
+                  <option value="NCE">NCE</option>
+                  <option value="BA/BSc/HND">BA/BSc/HND</option>
+                  <option value="MBA/MSc/MA">MBA/MSc/MA</option>
+                  <option value="Expatriate Job">Expatriate Job</option>
                 </select> <br>
 
                 <label for="jobtype">Job Type:</label>
                 <select id="jobType" name="jobtype">
-                <option value="">Select</option>
-                <option value="Full-Time">Full-Time</option>
-                <option value="Part-Time">Part-Time</option>
-                <option value="Remote">Remote</option>
-                <option value="Contract">Contract</option>
-                <option value="Expatriate Job">Expatriate Job</option>
+                  <option value="">Select</option>
+                  <option value="Full-Time">Full-Time</option>
+                  <option value="Part-Time">Part-Time</option>
+                  <option value="Remote">Remote</option>
+                  <option value="Contract">Contract</option>
+                  <option value="Expatriate Job">Expatriate Job</option>
                 </select>
-                  
+
               </div>
               <div class="input-2">
                 <label for="location">Job Location:</label>
-                <select id="state" name="location">
-                <option value="">Select</option>
+                <select id="jobLocation" name="location">
+                  <option value="">Select</option>
                   <option value="Abia">Abia</option>
                   <option value="Abuja">Abuja</option>
                   <option value="Adamawa">Adamawa</option>
@@ -136,25 +166,28 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                   <option value="Zamfara">Zamfara</option>
                 </select>
               </div>
+
+                  <label for="company-name">Company Name:</label>
+                  <input type="text" name="company-name" id="companyName"> <br>
+
+                  <label for="company-details">Company Details:</label>
+                  <textarea type="text" name="company-details" id="companyDetails"></textarea>
             </div>
-            <?php if (isset($_GET['success'])) { ?>
-              <p class="new-job"><?php echo $_GET['success']; ?></p>
-            <?php } ?>
-            <fieldset class="description">
-				<label for="job-description">
-					Job Description:
-				</label>
-				<textarea name="jobdescription" class="widgEditor nothing">Enter Job Description...</textarea>
-			</fieldset>
+            <fieldset class="description" >
+              <label for="job-description">
+                Job Description:
+              </label>
+              <textarea id="jobDescription" name="jobdescription" class="widgEditor nothing">Enter Job Description...</textarea>
+            </fieldset>
 
-      <fieldset class="job-method">
-				<label for="method">
-					Method Of Application:
-				</label>
-				<textarea name="method" class="widgEditor nothing">Enter Method Of Application...</textarea>
-			</fieldset>
+            <fieldset class="job-method">
+              <label for="method">
+                Method Of Application:
+              </label>
+              <textarea id="jobMethod" name="method" class="widgEditor nothing" >Enter Method Of Application...</textarea>
+            </fieldset>
 
-            <input class="post-btn" type="submit" name="submit" value="Post">
+            <input class="post-btn" type="submit" name="submit" value="Post" id="postBtn">
           </form>
 
         </div>
@@ -165,10 +198,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
       </div>
 
     </div>
-    <!-- <script src="https://cdn.quilljs.com/1.1.3/quill.js"></script> -->
-    <!-- <script src="/legitjobs/js/jquery-3.6.0.min.js"></script> -->
+    <script src="/legitjobs/js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="/legitjobs/js/jquery.richtext.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
     <script src="/legitjobs/js/dashboard.js"></script>
     <script src="/legitjobs/js/widgEditor.js"></script>
+    <script src="/legitjobs/js/post_ajax.js"></script>
   </body>
 
   </html>

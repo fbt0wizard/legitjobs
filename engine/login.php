@@ -2,8 +2,6 @@
 session_start(); 
 include "db_conn.php";
 
-if (isset($_POST['uname']) && isset($_POST['password'])) {
-
 	function validate($data){
        $data = trim($data);
 	   $data = stripslashes($data);
@@ -11,17 +9,17 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 	   return $data;
 	}
 
-	$uname = validate($_POST['uname']);
+	$uname = validate($_POST['username']);
 	$pass = validate($_POST['password']);
 
 	if (empty($uname)) {
-		header("Location: backend.php?error=Username is required");
+		echo "Username is required";
 	    exit();
 	}else if(empty($pass)){
-        header("Location: backend.php?error=Password is required");
+        echo "Password is required";
 	    exit();
 	}else{
-		$sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
+		$sql = "SELECT * FROM `adminlogs` WHERE user_name='$uname' AND password='$pass'";
 
 		$result = mysqli_query($conn, $sql);
 
@@ -31,21 +29,13 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
             	$_SESSION['user_name'] = $row['user_name'];
             	$_SESSION['name'] = $row['name'];
             	$_SESSION['id'] = $row['id'];
-				header("Location: waiting.php");
-		        exit();
-            }else{
-				header("Location: backend.php?error=Incorrect username or password");
-		        exit();
-			}
+				echo "good";
+            }
 		}else{
-			header("Location: backend.php?error=Incorrect username or password");
+			echo "Incorrect username or password";
 	        exit();
 		}
 	}
 	
-}else{
-	header("Location: backend.php");
-	exit();
-}
 
 ?>

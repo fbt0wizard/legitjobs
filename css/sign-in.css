@@ -7,10 +7,6 @@
 
 .success {
     color: green;
-    padding: 14px 12px;
-    border: 1px solid green;
-    background: #fff;
-    border-radius: 6px;
     width: max-content;
     margin: auto;
     margin-bottom: auto;
@@ -18,18 +14,13 @@
     line-height: 0;
 }
 
-.error {
+.error_login {
     color: red;
-    padding: 14px 12px;
-    border: 1px solid red;
-    background: #fff;
-    border-radius: 6px;
-    margin-top: 1rem;
     line-height: 0;
     width: max-content;
-    margin: auto;
-    margin-bottom: auto;
-    margin-bottom: 2rem;
+    margin: -26px auto 2rem auto;
+    visibility: hidden;
+    transition: 1s;
 }
 
 .password i {

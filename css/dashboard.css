@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    /* font-family: sans-serif; */
-    font-family: roboto;
-}
-
+@import "/legitjobs/css/basic.css";
 /* styling the nav bar  */
 
 .navbar {
@@ -126,17 +115,6 @@ fieldset label {
     margin-bottom: .6rem;
 }
 
-.new-job {
-    color: #fff;
-    padding: 7px 18px;
-    /* border: 1px solid green; */
-    background: rgb(58, 167, 58);
-    border-radius: 6px;
-    margin: .5rem auto;
-    font-size: 14px;
-    width: max-content;
-}
-
 .input input {
     width: 38%;
     height: 31px;
@@ -173,8 +151,9 @@ fieldset label {
     margin-left: 3px;
 }
   
-#experience {
+#experience, #experienceTo {
     margin-left: 13px;
+    width: 18%;
 }
 
 .post-btn {
@@ -193,4 +172,38 @@ fieldset label {
 .post-btn:hover {
     background-color: #fff;
     color: #008080;
+}
+
+#companyDetails {
+    margin-top: 11px;
+    width: 81.5%;
+    border: 1px solid #008080;
+    border-radius: 3px;
+}
+#companyDetails:focus {
+    outline: none;
+    background-color: #008080;
+    color: #fff;
+    font-size: 17px;
+}
+
+#tittle, #jobField {
+    margin-left: 29px;
+    margin-top: 11px;
+}
+
+#companyName {
+    margin-top: 11px;
+    width: 36.3%;
+    height: 31px;
+    border: 1px solid #008080;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#companyName:focus {
+    outline: none;
+    background-color: #008080;
+    color: #fff;
+    font-size: 17px;
 }

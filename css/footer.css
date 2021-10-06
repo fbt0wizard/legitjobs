@@ -1,0 +1,39 @@
+/* styling the footer */
+
+footer {
+    text-align: center;
+    height: 80px;
+    /* background-color: #008080; */
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links p {
+    margin: 7px;
+    font-size: 27px;
+}
+
+.facebook {
+    color: #4267B2;
+}
+
+.linkedin {
+    color: #0e76a8;
+}
+
+.twitter {
+    color: #1DA1F2;
+}
+
+.footer-links a {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.footer-links p {
+    font-size: 15px;
+}

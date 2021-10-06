@@ -13,18 +13,18 @@
         <img src="./images/Group 1.png" alt="logo">
         <div class="main-container">
             <div class="login-form">
-                <form action="login.php" method="post">
-                    <input type="text" name="uname" placeholder="Enter Username" required>
-                    <input type="password" name="password" placeholder="Enter Password" required>
-                    <button type="submit">Login</button>
+                <form method="post" id="form">
+                    <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                    <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                    <button type="button" id="loginBtn">Login</button>
                 </form>
-                <?php if (isset($_GET['error'])) { ?>
-     		<p class="error"><?php echo $_GET['error']; ?></p>
-     	        <?php } ?>
+               <p class="error"></p>
             </div>
 
         </div>
     </div>
+    <script src="/legitjobs/js/jquery-3.6.0.min.js"></script>
+    <script src="/legitjobs/js/backend.js"></script>
 </body>
 
 </html>

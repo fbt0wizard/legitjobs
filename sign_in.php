@@ -13,28 +13,25 @@
         <div>
             <h2 class="heading">Sign In</h2>
 
-            <form action="/legitjobs/client_login.php" method="post">
+            <form method="post">
                 <div class="email">
-                <input type="text" name="username" id="userName" placeholder="Username or Email" required>
+                <input type="text" name="username" id="username" placeholder="Username or Email" required>
                 </div>
                 <div class="password">
                     <input type="password" name="password" id="password" placeholder="Password" required>
                     <i class="bi bi-eye-slash" id="togglePassword"></i>
                 </div>
                 <div class="submit-btn">
-                    <button type="submit" name="sumit">Submit</button>
+                    <button type="submit" id="loginBtn">Submit</button>
                 </div>
-                <p>Already have an account? <a href="./sign_up.php">Sign Up</a></p>
-                <?php if (isset($_GET['success'])) { ?>
-     		<p class="success"><?php echo $_GET['success']; ?></p>
-     	        <?php } ?>
-                 <?php if (isset($_GET['error'])) { ?>
-     		<p class="error"><?php echo $_GET['error']; ?></p>
-     	        <?php } ?>
+                <p>Don't have an account? <a href="./sign_up.php">Sign Up</a></p>
+                    <p class="success"></p>
+                    <p class="error_login">error here</p>
             </form>
         </div>
     </div>
 
-    <script src="/legitjobs/js/client_login.js"></script>
+    <script src="/legitjobs/js/jquery-3.6.0.min.js"></script>
+    <script src="/legitjobs/js/sign_in.js"></script>
 </body>
 </html>

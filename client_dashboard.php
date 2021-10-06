@@ -14,7 +14,7 @@ if (isset($_SESSION['username'])) {
     <title></title>
 </head>
 <body>
-    <h1> <?php echo $_SESSION['first_name']; ?>, you registered</h1> <a href="/legitjobs/client_logout.php">Logout</a>
+    <h1> <?php echo $_SESSION['first_name']; ?>, you registered</h1> <a href="/legitjobs/engine/client_logout.php">Logout</a>
 </body>
 </html>
 

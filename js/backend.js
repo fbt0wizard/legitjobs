@@ -1,30 +1,36 @@
-$(document).ready(function(){
 
-    $( "#form" ).submit(function(event) {
-        event.preventDefault();
+$(document).ready(function () {
+
+    $("#loginBtn").click(function () {
+
+        var username = $("#username").val();
+        var password = $("#password").val();
+
+        if (username == '' || password == '') {
+            $("p").append('please fill all fields');
+            return false;
+        }
 
         $.ajax({
-            type: 'POST',
-            url: '/login',
-            data: $('#form').serialize(),
-            dataType: "json",
-            success: function(response){
-                //alert("a");
-                //console.log(response.Success);
-                $('#form')[0].reset();
+            type: "POST",
+            url: "/legitjobs/engine/login.php",
+            data: {
+                username: username,
+                password: password
+            },
+            cache: false,
+            success: function (data) {
+                if(data == "good") {
+                   window.location.href = "waiting.php";
+                } else {
+                    $('p').append(data);
+                }   
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr);
+            }
+        });
 
-                document.getElementById("check").innerHTML=response.Success;
-                     //ADD THIS CODE
-                     setTimeout(function(){
-                         document.getElementById("check").innerHTML="";
-                     },3000);
-                     if (response.Success=="Success!") {
-                         document.getElementById("aa").click();
-                     };
-                 },
-                 error: function() {
-                 }
-             })
     });
 
 });

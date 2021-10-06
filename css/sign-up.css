@@ -49,13 +49,6 @@ input:focus {
     color: #fff;
     font-size: 14px;
 }
-/* .password {
-    display: flex;
-}
-.password input {
-
-} */
-
 
 
 form button {
@@ -82,19 +75,16 @@ form button:hover {
     margin-left: 5%;
     width: max-content;
 }
-.reg-good {
+
+.server-error {
     line-height: 0px;
-    text-align: start;
-    font-size: 12px;
-    color: green;
-    margin-left: 5%;
+    font-size: 13px;
+    color: red;
+    margin: auto;
+    width: max-content;
 }
-.pass-match {
-    font-size: 12px;
-    color: green;
-    line-height: 0;
-    margin-left: 23.3%;
-}
+
+
 .pass-not {
     font-size: 12px;
     color: red;
@@ -122,7 +112,7 @@ form button:hover {
     font-size: 12px;
     color: red;
     line-height: 0;
-    margin-left: 23.3%;
+    margin-left: 48.3%;
 }
 
 .already {
