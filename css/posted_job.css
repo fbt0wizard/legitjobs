@@ -1,0 +1,135 @@
+.posted-job {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(170, 123, 123, 0.3);
+  padding: 20px 16px;
+  text-align: start;
+  border-radius: 5px;
+  margin-bottom: .4rem;
+}
+.posted-job:hover {
+  box-shadow: 0 4px 8px 0 rgba(170, 123, 123, 0.83);
+}
+.heading {
+  margin-bottom: 0.5rem;
+}
+.heading a {
+  text-decoration: none;
+  color: #008080;
+}
+.heading a:hover {
+  color: #033636;
+}
+.location {
+  margin-bottom: 3px;
+  color: #686868;
+  font-size: 17px;
+}
+.date {
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 3px;
+  color: #333;
+}
+.apply-now {
+  margin-bottom: 5px;
+}
+.apply-now a {
+  text-decoration: none;
+  color: rgb(7, 7, 192);
+}
+.apply-now a:hover {
+  color: rgb(7, 7, 104);
+}
+.apply-now i {
+  font-size: 15px;
+  margin-right: 4px;
+}
+.company-name {
+  color: #008080;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 3px;
+  margin-bottom: 10px;
+}
+.company-details {
+  color: #2f2f2f;
+  font-size: 15px;
+  line-height: 29px;
+}
+.company-section,
+.job-details-section, .app-method {
+  text-align: center;
+  font-weight: 600;
+  color: blue;
+  font-size: 19px;
+  margin-top: 3rem;
+  margin-bottom: 13px;
+}
+.tittle-qualification {
+  font-weight: 500;
+  font-size: 16px;
+  color: #008080;
+  width: max-content;
+  border-radius: 3px;
+  margin-top: 3rem;
+  margin-bottom: 13px;
+}
+.experience a,
+.job_type a,
+.qualification a,
+.field {
+  text-decoration: none;
+  color: red;
+  font-size: 14px;
+  margin: 15px;
+}
+.experience a:hover,
+.job_type a:hover,
+.qualification a:hover,
+.job-field a:hover {
+  text-decoration: underline;
+}
+.experience,
+.job_type,
+.qualification,
+.job-field {
+  margin-bottom: 5px;
+}
+p,
+div {
+  color: #464646;
+  font-size: 14px;
+}
+li {
+  font-size: 14px;
+  line-height: 28px;
+  margin: 1rem 2rem;
+  width: 95%;
+}
+strong {
+  color: #008080;
+  font-size: 18px;
+  font-weight: normal;
+  font-size: 15px;
+}
+a,
+a strong {
+  text-decoration: none;
+  color: #008080;
+}
+a:hover,
+a strong:hover {
+  color: red;
+}
+p strong {
+  margin-top: 1rem;
+}
+
+h3 a {
+  color: blue;
+  text-decoration: none;
+}
+
+h3 a:hover {
+  color: rgb(119, 119, 238);
+}

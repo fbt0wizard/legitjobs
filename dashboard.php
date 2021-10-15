@@ -19,6 +19,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link rel="stylesheet" href="./css/info.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/widgContent.css" />
+    <link rel="stylesheet" href="css/chosen.css">
     <!-- <link rel="stylesheet" href="./css/richtext.min.css" /> -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
@@ -104,7 +105,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 </select> <br>
 
                 <label for="qualification">Qualification:</label>
-                <select id="qualification" name="qualification">
+                <select id="qualification" data-placeholder="Choose Qualification..." name="qualification[]" class="chosen-select" multiple tabindex="4">
                   <option value="">Select</option>
                   <option value="SSCE">SSCE</option>
                   <option value="OND">OND</option>
@@ -114,8 +115,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                   <option value="Expatriate Job">Expatriate Job</option>
                 </select> <br>
 
-                <label for="jobtype">Job Type:</label>
-                <select id="jobType" name="jobtype">
+                <label id="typeLabel" for="jobtype">Job Type:</label>
+                <select id="jobType" data-placeholder="Choose field..." name="job_field[]" class="chosen-select" multiple tabindex="4">
                   <option value="">Select</option>
                   <option value="Full-Time">Full-Time</option>
                   <option value="Part-Time">Part-Time</option>
@@ -127,7 +128,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
               </div>
               <div class="input-2">
                 <label for="location">Job Location:</label>
-                <select id="jobLocation" name="location">
+                <select id="jobLocation" data-placeholder="Choose Location..." name="location[]" class="chosen-select" multiple tabindex="4">
                   <option value="">Select</option>
                   <option value="Abia">Abia</option>
                   <option value="Abuja">Abuja</option>
@@ -199,6 +200,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
     </div>
     <script src="/legitjobs/js/jquery-3.6.0.min.js"></script>
+    <script src="/legitjobs/js/chosen.jquery.js" type="text/javascript"></script>
+    <script src="/legitjobs/js/init.js" type="text/javascript" charset="utf-8"></script>
     <!-- <script src="/legitjobs/js/jquery.richtext.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
     <script src="/legitjobs/js/dashboard.js"></script>

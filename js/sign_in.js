@@ -38,7 +38,7 @@ $(document).ready(function () {
             cache: false,
             success: function (data) {
                 if(data == "good") {
-                   window.location.href = "client_dashboard.php";
+                   window.location.href = "index.php";
                 } else {
                     $('.error_login').html(data);
                     $('.error_login').css("visibility", "visible");

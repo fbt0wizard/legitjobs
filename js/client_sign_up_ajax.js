@@ -33,7 +33,7 @@ $(document).ready(function () {
                         'Registration Succesfull!',
                         '<p style="font-size: 14px; color: green">Please sign in now</p>',
                         'success'
-                      )
+                    )
                       setTimeout(function(){location.href="sign_in.php"} , 5000); 
                 } else {
                     $('#errF').html(data);

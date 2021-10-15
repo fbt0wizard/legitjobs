@@ -103,6 +103,10 @@
     color: #242424;
 }
 
+#typeLabel {
+    margin-right: 23px;
+}
+
 .text-area {
     margin-top: 2rem;
 }

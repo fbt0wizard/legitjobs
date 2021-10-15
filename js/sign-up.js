@@ -90,3 +90,4 @@ function double() {
 function clearError() {
     document.getElementById("errF").innerHTML = "";
 }
+

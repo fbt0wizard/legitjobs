@@ -1,0 +1,109 @@
+.side-nav {
+    height: 100vh;
+    width: 226px;
+    background-color: #008080;
+    line-height: 37px;
+    position: absolute;
+    transition: all .1s ease-out;
+}
+
+.side-nav-active {
+    transform: translateX(-100%);
+}
+
+.site-logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoimg {
+    width: 60px;
+    margin-left: 23px;
+    margin-top: 1rem;
+    border-radius: 28px 0px;
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.links {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    transition: all .4s;
+    background-color: #3b8080;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 4px 9px;
+}
+
+.nav-links a:hover {
+    margin-left: 18px;
+    /* background-color: #deb887; */
+    background-color: #fff;
+    color: #008080;
+}
+
+.nav-links {
+    margin-top: 2rem;
+    display: grid;
+}
+
+.nav-links i {
+    margin-right: 10px;
+}
+
+.close-nav {
+    display: none;
+    margin-right: 10px;
+    color: #fffbfb;
+    cursor: pointer;
+}
+
+/* styling the burger icon  */
+.burger {
+    display: none;
+    width: max-content;
+    padding: 9px 5px;
+    border-radius: 17px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(121, 121, 121, 0.3) 0px 18px 36px -18px inset;
+    cursor: pointer;
+}
+
+.l1 {
+    width: 14px;
+    height: 3px;
+    background-color: #008080;
+    margin-bottom: 3px;
+    margin-left: 5px;
+}
+.l2 {
+    width: 24px;
+    height: 3px;
+    background-color: #008080;
+    margin-bottom: 3px;
+}
+.l3 {
+    width: 14px;
+    height: 3px;
+    background-color: #008080;
+    margin-left: 5px;
+}
+
+/* styling the topnav */
+.top-nav {
+    background-color: #fff;
+    height: 70px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.mobile-menu {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -21,3 +21,15 @@ header("refresh:4; url=dashboard.php");
     <script src="/legitjobs/js/waiting.js"></script>
 </body>
 </html>
+
+
+<!-- 
+<select class="multipleChosen" name="list[]" id="input" multiple="true">
+        <option value="1">Excellent</option>
+        <option value="2">Very Good</option>
+        <option value="3">Good</option>
+        <option value="4">Not Bad</option>
+        <option value="5">Bad</option>
+        <option value="6">Very Bad</option>
+		</select>	
+    <button onclick="fire()">check</button> -->
