@@ -1,85 +1,197 @@
 @import "/legitjobs/css/basic.css";
+@import "/legitjobs/css/posted_job.css";
 
 body {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .main-body {
-    margin-left: 226px;
+  margin-left: 226px;
 }
 
 .section-1 {
-    max-height: 170px;
-    padding: 5px;
-    /* border: 1px solid rgb(90, 90, 90); */
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  max-height: 170px;
+  padding: 5px;
+  /* border: 1px solid rgb(90, 90, 90); */
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .p-logo {
-    text-align: center;
-    padding: 42px 0px;
-    border: 1px solid #008080;
-    border-radius: 50%;
-    font-size: 2rem;
-    background-color: #f2f2f2;
-    color: #595959;
-    width: 128px;
-    margin: 5px;
-    margin-right: 20px;
+  text-align: center;
+  padding: 42px 0px;
+  border: 1px solid #008080;
+  border-radius: 50%;
+  font-size: 2rem;
+  background-color: #f2f2f2;
+  color: #595959;
+  width: 128px;
+  margin: 5px;
+  margin-right: 20px;
 }
 
 .f-name {
-    color: #008080;
-    font-size: 25px;
+  color: #008080;
+  font-size: 25px;
+}
+.process {
+  color: #000;
+  font-weight: 600;
 }
 .user-name {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .user-name a {
-    text-decoration: none;
-    margin-left: 19px;
-    font-size: 13px;
-    color: #008080;
-    border: 1px solid #008080;
-    padding: 1px 4px;
+  text-decoration: none;
+  margin-left: 19px;
+  font-size: 13px;
+  color: #008080;
+  border: 1px solid #008080;
+  padding: 1px 4px;
 }
 
 .user-name a:hover {
-    color: #fff;
-    background-color: #008080;
+  color: #fff;
+  background-color: #008080;
 }
 
 .profile-completion {
-    font-size: 13px;
-    margin-top: 5px;
+  font-size: 13px;
+  margin-top: 5px;
+  color: #000;
 }
 
 /* progress bar */
 
 #progressbar {
-    margin-top: 9px;
-    width: 242px;
-    background-color: rgb(204, 204, 204);
-    border-radius: 3px;
-    /* (height of inner div) / 2 + padding */
-    padding: 3px;
+  margin-top: 9px;
+  width: 242px;
+  background-color: rgb(204, 204, 204);
+  border-radius: 3px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
 }
-  
-#progressbar>div {
-    background-color: #008080;
-    width: 20%;
-    /* Adjust with JavaScript */
-    height: 12px;
-    border-radius: 3px;
+
+#progressbar > div {
+  background-color: #008080;
+  width: 20%;
+  /* Adjust with JavaScript */
+  height: 12px;
+  border-radius: 3px;
 }
 
 .complete {
-    font-size: 12px;
-    color: #008080;
-    margin-top: 8px;
+  font-size: 12px;
+  color: #008080;
+  margin-top: 8px;
+}
+
+/* section 2 */
+
+.posted-job {
+  min-width: 461px;
+}
+
+.section-2 {
+  margin: 14px;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.item1 {
+  min-width: 361px;
+  grid-area: 1 / 2 / 2 / 3;
+}
+.item2 {
+  grid-area: 1 / 1 / 2 / 2;
+  height: max-content;
+  width: 100%;
+  min-width: 461px;
+}
+.sub-item1 {
+  text-align: center;
+}
+
+.job-control {
+  color: #008080;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+.filter-heading {
+  float: right;
+  width: 364px;
+}
+
+.right-links {
+  float: right;
+  background-color: #fff;
+  border: none;
+  box-shadow: #000 0px 0px 1.5px 0px;
+  padding: 6px 33px;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  width: 364px;
+  cursor: pointer;
+}
+.right-links:hover {
+  background-color: rgb(248, 248, 248);
+}
+.update-profile {
+  color: #008080;
+}
+
+.more-updates {
+  font-size: 12px;
+  margin-top: 8px;
+}
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+.filter {
+  width: max-content;
+  padding: 4px 8px;
+  margin: 0 9px 9px 0;
+  border-radius: 3px;
+  width: max-content;
+  background-color: #008080;
+  color: #fff;
+}
+.sub-item3 {
+  border: 1px solid #008080;
+  height: 250px;
+  width: 82%;
+  text-align: center;
+  padding: 10px;
+  float: right;
+  position: sticky;
+  top: 110px;
+  border-radius: 3px;
+  max-width: 365px;
+  min-width: 300px;
+}
+
+@media only screen and (max-width: 858px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .sub-item1 {
+    display: grid;
+  }
+  .filter-heading {
+    margin: auto;
+  }
+  .right-links {
+    margin: auto;
+  }
 }

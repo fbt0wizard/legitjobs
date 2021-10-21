@@ -24,7 +24,7 @@
                 <div class="submit-btn">
                     <button type="submit" id="loginBtn">Submit</button>
                 </div>
-                <p>Don't have an account? <a href="./sign_up.php">Sign Up</a></p>
+                <p class="already">Don't have an account? <a href="./sign_up.php">Sign Up</a></p>
                     <p class="success"></p>
                     <p class="error_login">error here</p>
             </form>

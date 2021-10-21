@@ -36,3 +36,19 @@ const navSlide = () => {
 navSlide();
 
 
+// ajax call for jobs
+
+// $(document).ready(function () {
+//     $.ajax({    
+//       type: "GET",
+//       url: "/legitjobs/engine/home_engine.php",             
+//       dataType: "html",                  
+//       success: function(data){ 
+//           $(".card-2").html(data); 
+         
+//       }
+//   });
+// });
+
+
+

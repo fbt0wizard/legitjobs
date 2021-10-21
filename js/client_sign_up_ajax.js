@@ -27,14 +27,16 @@ $(document).ready(function () {
                 phone: phone,
             },
             cache: false,
-            success: function (data) {
+            success: async function (data) {
                 if(data == 'ok') {
-                    Swal.fire(
-                        'Registration Succesfull!',
-                        '<p style="font-size: 14px; color: green">Please sign in now</p>',
-                        'success'
-                    )
-                      setTimeout(function(){location.href="sign_in.php"} , 5000); 
+                    const waiting = await Swal.fire({
+                        tittle: 'Registration Succesfull!',
+                        icon: 'success',
+                        html:  '<p style="font-size: 14px; color: green">Please sign in now</p>'   
+                    })
+                    if(waiting) {
+                        location.href="sign_in.php"
+                    } 
                 } else {
                     $('#errF').html(data);
                 }   

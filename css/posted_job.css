@@ -1,10 +1,12 @@
 .posted-job {
   background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(170, 123, 123, 0.3);
+  /* box-shadow: 0 4px 8px 0 rgba(170, 123, 123, 0.3); */
+  box-shadow: #000 0px 0px 2px 0px;
   padding: 20px 16px;
   text-align: start;
   border-radius: 5px;
   margin-bottom: .4rem;
+  transition: all .4s ease-in-out;
 }
 .posted-job:hover {
   box-shadow: 0 4px 8px 0 rgba(170, 123, 123, 0.83);
@@ -20,9 +22,9 @@
   color: #033636;
 }
 .location {
-  margin-bottom: 3px;
+  margin-bottom: 6px;
   color: #686868;
-  font-size: 17px;
+  font-size: 14px;
 }
 .date {
   font-size: 12px;
@@ -58,9 +60,8 @@
 }
 .company-section,
 .job-details-section, .app-method {
-  text-align: center;
   font-weight: 600;
-  color: blue;
+  color: #535353;
   font-size: 19px;
   margin-top: 3rem;
   margin-bottom: 13px;
@@ -77,11 +78,22 @@
 .experience a,
 .job_type a,
 .qualification a,
-.field {
+.job_field a {
   text-decoration: none;
-  color: red;
+  color: #333;
   font-size: 14px;
-  margin: 15px;
+}
+.experience a {
+  margin-left: 22px;
+}
+.job_type a {
+  margin-left: 34px;
+}
+.qualification a {
+  margin-left: 11px;
+}
+.job_field a {
+  margin-left: 32px;
 }
 .experience a:hover,
 .job_type a:hover,

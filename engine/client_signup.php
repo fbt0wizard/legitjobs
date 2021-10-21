@@ -103,8 +103,14 @@ $trn_date = date("Y-m-d H:i:s");
         $query = "INSERT into `users` (first_name, last_name, username, password, phone_no, email, trn_date)
         VALUES ('$fname', '$lname', '$username', '".md5($password)."', '$phone', '$email', '$trn_date')";
        $result = mysqli_query($conn,$query);
+
        if($result){
-           echo 'ok';
+        $second_query = "INSERT into `user_data` (email)
+        VALUES ('$email')";
+        $second_result = mysqli_query($conn,$second_query);
+        if($second_result) {
+            echo 'ok';
+        }
        }
     }
 

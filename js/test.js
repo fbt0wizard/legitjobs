@@ -5,9 +5,6 @@ const navSlide = () => {
 
     burger.addEventListener("click",()=>{
         nav.classList.toggle("side-nav-active");
-        document.getElementById('mainBody').style.marginLeft = '226px';
-        document.querySelector('.close-nav').style.display = 'block';
-        document.querySelector('.burger').style.display = 'none';
     })
 }
 
@@ -19,10 +16,92 @@ const navClose = () => {
 
     close.addEventListener("click",()=>{
         sideNav.classList.toggle("side-nav-active");
-        document.getElementById('mainBody').style.marginLeft = '0px';
-        document.querySelector('.burger').style.display = 'block';
-        document.querySelector('.close-nav').style.display = 'none';
     })
 }
 
 navClose();
+
+var location_pref = "";
+var qualification = "";
+var jobType = "";
+
+async function setLocation() {
+    const {value: formValue } = await Swal.fire({
+        showCloseButton: true,
+        html: '<div style="padding-top: 2rem;">' +
+        '<h2 style="font-weight: 500; margin-bottom: 1rem; font-size: 17px; color: #008080;">Select your location</h2>'+
+        '<select placeHolder="Select Location" id="swal-input1" style="width: 80%; outline: none; border: 1px solid #000; border-radius: 3px; height: 24px; font-size: 15px; color: grey;">' +
+           '<option value="">All Locations</option>'+
+           '<option value="Lagos">Lagos</option>'+
+           '<option value="Abuja">Abuja</option>'+
+           '<option value="Akwa ibom">Akwa ibom</option>'+
+           '<option value="Anambra">Anambra</option>'+
+        '</select>'+
+ 
+        '<select id="swal-input2" style="width: 80%; outline: none; border: 1px solid #000; border-radius: 3px; height: 24px; font-size: 15px; color: grey; margin-top:1.5rem;">' +
+           '<option value="">All qualifications</option>'+
+           '<option value="NCE">NCE</option>'+
+           '<option value="BA/BSc/HND">BA/BSc/HND</option>'+
+           '<option value="SSCE">SSCE</option>'+
+           '<option value="OND">OND</option>'+
+           '<option value="MBA/MSc/MA">MBA/MSc/MA</option>'+
+           '<option value="Expatriate Job">Expatriate Job</option>'+
+        '</select>'+
+    
+        '<select id="swal-input3" style="width: 80%; outline: none; border: 1px solid #000; border-radius: 3px; height: 24px; font-size: 15px; color: grey;margin-top:1.5rem;">' +
+           '<option value="">All Job types</option>'+
+           '<option value="Full-time">Full-time</option>'+
+           '<option value="Part-time">Part-time</option>'+
+           '<option value="Remote">Remote</option>'+
+           '<option value="Contract">Contract</option>'+
+           '<option value="Expatriate Job">Expatriate Job</option>'+
+        '</select>'+
+                '</div>'
+    
+      })
+      
+      if (formValue) {
+        location_pref = document.getElementById('swal-input1').value;
+        qualification = document.getElementById('swal-input2').value;
+        jobType = document.getElementById('swal-input3').value;
+        updateLocation();
+      }
+}
+
+
+function updateLocation() {
+    $.ajax({
+        type: "POST",
+        url: "/legitjobs/engine/handle_pref.php",
+        data: {
+            location: location_pref,
+            qualification: qualification,
+            jobType: jobType
+        },
+        cache: false,
+        success: async function (data) {
+            if(data == 'posted') {
+                const pending = await Swal.fire({
+                    icon: 'success',
+                    text: 'Your job prefrence has been saved!'
+                });
+                if(pending) {
+                    location.reload();
+                    return;
+                }
+            }else {
+                console.log(data);
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error(xhr);
+        }
+
+    })
+}
+
+
+
+    
+
+ 

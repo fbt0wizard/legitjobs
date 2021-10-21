@@ -1,3 +1,8 @@
+.sticky-side-nav {
+    position: fixed;
+    z-index: 1000;
+}
+
 .side-nav {
     height: 100vh;
     width: 226px;
@@ -5,10 +10,6 @@
     line-height: 37px;
     position: absolute;
     transition: all .1s ease-out;
-}
-
-.side-nav-active {
-    transform: translateX(-100%);
 }
 
 .site-logo {
@@ -96,14 +97,82 @@
 /* styling the topnav */
 .top-nav {
     background-color: #fff;
-    height: 70px;
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 1px;
+    position: sticky;
+    top: 0px;
 }
-
+.right-link-container {
+    display: flex;
+    align-items: center;
+}
 .mobile-menu {
     padding: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 2rem;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 121px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 1px;
+    z-index: 1000;
+    border-radius: 3px;
+}
+.dropdown-content a {
+    font-size: 13px;
+    width: max-content;
+    color: #008080;
+    padding: 10px 7px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a i {
+    margin-right: 4px;
+}
+.dropdown-content a:hover {
+    color: rgb(88, 88, 88);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn {
+    color: #008080;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+.dropbtn i {
+    font-size: 25px;
+    margin-right: 3px;
+    color: #6c6c6c;
+}
+
+@media only screen and (max-width: 1110px) {
+    .side-nav {
+        transform: translateX(-100%);
+    }
+    .side-nav-active {
+        transform: translateX(0%);
+    }
+    .main-body {
+        margin-left: 0;
+    }
+    .burger {
+        display: inline-block;
+    }
+    .close-nav{
+        display: block;
+    }
+    .close-nav i {
+        font-size: 23px;    }
 }

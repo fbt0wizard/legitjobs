@@ -32,6 +32,7 @@ require "engine/db_conn.php";
                 <a href="index.php">Home</a>
                 <a href="#news">Resume</a>
                 <a href="#news">Blog</a>
+                <a href="#news">Post Job</a>
             </div>
             <div class="sign-in">
                 <a href="./sign_in.php">Sign In</a><a href="./sign_up.php">Sign Up</a>
@@ -73,17 +74,11 @@ require "engine/db_conn.php";
                     while ($row = mysqli_fetch_array($data_query)) {
                         $id = $row['id'];
                         $heading = $row['heading'];
-                        $experience = $row['experience'];
-                        $experience_to = $row['experience_to'];
-                        $qualification =  $row['qualification'];
                         $job_type =  $row['job_type'];
                         $location =  $row['location'];
-                        $job_describtion =  $row['job_describtion'];
-                        $job_methos  =  $row['job_methos'];
                         $date_time = $row['date_posted'];
                         $company_name  =  $row['company_name'];
                         $company_details  = substr($row['company_details'], 0, 200);
-
                         $date_time_now = date("Y-m-d H:i:s");
                         $start_date = new DateTime($date_time);
                         $end_date = new DateTime($date_time_now);

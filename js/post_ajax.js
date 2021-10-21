@@ -14,15 +14,6 @@ $(document).ready(function () {
         var job_description = $("#jobDescription").val();
         var job_method = $("#jobMethod").val();
 
-        // if (job_description.includes('')) {
-        //     Swal.fire(
-        //         'Error!',
-        //         '<h4 style="font-size: 10px",color: red";>Job heading cannot be empty!</h4>',
-        //         'error'
-        //       );
-        //     return false;
-        // }
-
         $.ajax({
             type: "POST",
             url: "/legitjobs/engine/post_engine.php",
@@ -48,8 +39,6 @@ $(document).ready(function () {
                         'Job has been posted!',
                         'success'
                       );
-                    //   document.getElementById('heading').value = "";
-                    //   document.getElementById('jobDescription2').value = "";
                       return;
                 }else {
                     console.log(data);

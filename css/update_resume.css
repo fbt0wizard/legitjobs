@@ -1,0 +1,85 @@
+@import "/legitjobs/css/basic.css";
+
+body {
+    background-color: #fff;
+}
+
+.name, .address {
+    display: flex;
+    align-items: center;
+}
+
+.tittle, .first-name, .last-name, .email, .phone, .group1, .group2, .group3, .group4 {
+    margin: 13px;
+}
+.first-name, .last-name {
+    width: 33%;
+}
+
+#streetAddress, #state, #city, #country {
+    border: 1px solid #008080;
+    height: 27px;
+    border-radius: 3px;
+    width: 100%;
+    outline: none;
+}
+.group-set1, .group-set2 {
+    width: 41%;
+}
+
+label {
+    color: #000;
+    font-size: 13px;
+}
+.email-address, .phone-number {
+    color: #8e8e8e;
+    margin-top: 5px;
+}
+.form-section {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 1px;
+    width: 64%;
+    margin-top: 2rem;
+    padding: 12px;
+}
+#tittle {
+    width: 83px;
+    background: none;
+    border: 1px solid #008080;
+    border-radius: 3px;
+    height: 26px;
+    color: #000;
+}
+
+.name input {
+    border: 1px solid #008080;
+    height: 27px;
+    border-radius: 3px;
+    color: #000;
+    width: 100%;
+    padding: 4px;
+    outline: none;
+}
+
+.head-text {
+    text-align: center;
+    color: #008080;
+    margin: 17px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.update-button {
+    background-color: #008080;
+    border: 1px solid #008080;
+    padding: 7px 9px;
+    border-radius: 3px;
+    color: #fff;
+    margin-left: 11px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.update-button:hover {
+    background-color: #fff;
+    color: #008080;
+}
+

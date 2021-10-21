@@ -39,7 +39,7 @@ if (mysqli_num_rows($result) > 0) {
                     
                     <p class='tittle-qualification'>$job_tittle</p>
 
-                    <p class='experience'><span class='names'>Experience: </span><a href='#'>$experience $experience_to</a></p>
+                    <p class='experience'><span class='names'>Experience: </span><a href='#'>$experience $experience_to years</a></p>
                     <p class='job_type'><span class='names'>Job Type: </span><a href='#'> $job_type</a></p>
                     <p class='qualification'><span class='names'>Qualification: </span><a href='#'> $qualification</a></p>
                     <p class='job_field'><span class='names'>Job Field: </span><a class='field' href='#'> $job_field</a></p>
@@ -51,7 +51,7 @@ if (mysqli_num_rows($result) > 0) {
                     
                     <p class='app-method'>Application Method:</p>
 
-                    <p class='App-method'>$job_methos</p>
+                    <p style='line-height: 27px'>$job_methos</p>
                 </div>";
     }
 } else {

@@ -27,8 +27,12 @@ session_start();
 		$_SESSION['username'] = $row['username'];
 		$_SESSION['first_name'] = $row['first_name'];
 		$_SESSION['last_name'] = $row['last_name'];
+		$_SESSION['email'] = $row['email'];
+		$_SESSION['phone'] = $row['phone_no'];
 		$_SESSION['trn_date'] = $row['trn_date'];
 		$_SESSION['id'] = $row['id'];
+	
+
 		echo "good";
 	}else {
 		echo "Incorrect Password";
