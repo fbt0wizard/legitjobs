@@ -32,7 +32,7 @@ require "engine/db_conn.php";
                 <a href="index.php">Home</a>
                 <a href="#news">Resume</a>
                 <a href="#news">Blog</a>
-                <a href="#news">Post Job</a>
+                <a href="post_a_job.php">Post Job</a>
             </div>
             <div class="sign-in">
                 <a href="./sign_in.php">Sign In</a><a href="./sign_up.php">Sign Up</a>
@@ -43,9 +43,10 @@ require "engine/db_conn.php";
         <div class="search-item1">
             <div class="search-container">
                 <div class="grid-item-search">
-                    <input type="search" id="searchJob" placeholder="Job name..."></input>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <input type="search" id="searchJob" placeholder="State..."></input>
+                    <label for="search" class="search-label"><i class="fa fa-question" aria-hidden="true"></i><input type="search" id="searchJob" placeholder="Job name..."></input></label>
+
+
+                    <label class="search-label" for="states"><i class="fa fa-map-marker" aria-hidden="true"></i><input type="search" id="searchJob" placeholder="State..."></input></label>
                     <button class="search"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </div>
             </div>
@@ -75,7 +76,12 @@ require "engine/db_conn.php";
                         $id = $row['id'];
                         $heading = $row['heading'];
                         $job_type =  $row['job_type'];
+                        $job_tittle =  $row['job_tittle'];
                         $location =  $row['location'];
+                        $location1 =  $row['location1'];
+                        $location2 =  $row['location2'];
+                        $location3 =  $row['location3'];
+                        $location4 =  $row['location4'];
                         $date_time = $row['date_posted'];
                         $company_name  =  $row['company_name'];
                         $company_details  = substr($row['company_details'], 0, 200);
@@ -132,14 +138,19 @@ require "engine/db_conn.php";
 
                         $str .=
                             "<div class='posted-job'>
-                    <h3 class='heading'><a href='job_details.php?id=$id'>$heading </a></h3>
-    
-                    <p class='location'>Location: $location </p>
-                    <p class='date'>Posted $time_message</p>
-                        <br>
-                    <p class='company-name'> $company_name</p>
-                    <p class='company-details'>$company_details<a href='job_details.php?id=$id'> Read more>>></a></p>
-                </div>";
+                                <h3 class='heading'><a href='jobs.php?id=$id'>$job_tittle at $company_name </a></h3>
+        
+                                <p class='location'>Location: $location  
+                                <span class='location'>$location1 </span>
+                                <span class='location'>$location2 </span>
+                                <span class='location'>$location3 </span> 
+                                <span class='location'>$location4</span></p>
+                                <p class='date'>Posted $date_time</p>
+                                <p class='date'>Posted $time_message</p>
+                                <br>
+                                <p class='company-name'> $company_name</p>
+                                <p class='company-details'>$company_details<a href='job_details.php?id=$id'> Read more>>></a></p>
+                            </div>";
                     }
                 }
 

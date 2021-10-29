@@ -1,8 +1,8 @@
 <?php 
 session_start();
-require "engine/db_conn.php";
 
 if (isset($_SESSION['username'])) {
+  require "engine/db_conn.php";
 
   $email = $_SESSION['email'];
 
@@ -16,28 +16,29 @@ if (isset($_SESSION['username'])) {
     }
   }
   $str = '';
+
   if (strlen($pref) < 2 && strlen($qualification_pref) < 2 && strlen($jobType) < 2) {
     $data_query = mysqli_query($conn, 'SELECT * FROM job_post WHERE user_close= "no" ORDER BY id DESC');
   } elseif (strlen($pref) > 2 && strlen($qualification_pref) > 2 && strlen($jobType) > 2) {
-    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && qualification = '$qualification_pref' && job_type='$jobType' ORDER BY id DESC");
+    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && qualification = '$qualification_pref' && job_type='$jobType' && user_close= 'no' ORDER BY id DESC");
   } elseif (strlen($qualification_pref) > 2 && strlen($pref) > 2) {
-    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && qualification = '$qualification_pref' ORDER BY id DESC");
+    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && qualification = '$qualification_pref' && user_close= 'no' ORDER BY id DESC");
   } elseif (strlen($jobType) > 2 && strlen($pref) > 2) {
-    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && job_type='$jobType' ORDER BY id DESC");
+    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && job_type='$jobType' && user_close= 'no' ORDER BY id DESC");
   } elseif (strlen($pref) > 2) {
-    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' ORDER BY id DESC");
+    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && user_close= 'no' ORDER BY id DESC");
   } elseif (strlen($pref) > 2 && strlen($qualification_pref) > 2) {
-    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && qualification = '$qualification_pref' ORDER BY id DESC");
+    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && qualification = '$qualification_pref' && user_close= 'no' ORDER BY id DESC");
   } elseif (strlen($jobType) > 2 && strlen($qualification_pref) > 2) {
-    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE qualification = '$qualification_pref' && job_type='$jobType' ORDER BY id DESC");
+    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE qualification = '$qualification_pref' && job_type='$jobType' && user_close= 'no' ORDER BY id DESC");
   } elseif (strlen($qualification_pref) > 2) {
-    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE qualification = '$qualification_pref' ORDER BY id DESC");
+    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE qualification = '$qualification_pref' && user_close= 'no' ORDER BY id DESC");
   } elseif (strlen($qualification_pref) > 2 && strlen($jobType) > 2) {
-    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE job_type='$jobType' && qualification = '$qualification_pref' ORDER BY id DESC");
+    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE job_type='$jobType' && qualification = '$qualification_pref' && user_close= 'no' ORDER BY id DESC");
   } elseif (strlen($pref) > 2 && strlen($jobType) > 2) {
-    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && job_type='$jobType' ORDER BY id DESC");
+    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE location= '$pref' && job_type='$jobType' && user_close= 'no' ORDER BY id DESC");
   } elseif (strlen($jobType) > 2) {
-    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE job_type = '$jobType' ORDER BY id DESC");
+    $data_query = mysqli_query($conn, "SELECT * FROM job_post WHERE job_type = '$jobType' && user_close= 'no' ORDER BY id DESC");
   }
 
 
@@ -52,7 +53,12 @@ if (isset($_SESSION['username'])) {
       $experience_to = $row['experience_to'];
       $qualification =  $row['qualification'];
       $job_type =  $row['job_type'];
+      $job_tittle =  $row['job_tittle'];
       $location =  $row['location'];
+      $location1 =  $row['location1'];
+      $location2 =  $row['location2'];
+      $location3 =  $row['location3'];
+      $location4 =  $row['location4'];
       $job_describtion =  $row['job_describtion'];
       $job_methos  =  $row['job_methos'];
       $date_time = $row['date_posted'];
@@ -61,14 +67,19 @@ if (isset($_SESSION['username'])) {
 
       $str .=
         "<div class='posted-job'>
-                    <h3 class='heading'><a href='jobs.php?id=$id'>$heading </a></h3>
+                    <h3 class='heading'><a href='jobs.php?id=$id'>$job_tittle at $company_name </a></h3>
 
-                    <p class='location'>Location: $location </p>
+                    <p class='location'>Location: $location  
+                    <span class='location'>$location1 </span>
+                    <span class='location'>$location2 </span>
+                     <span class='location'>$location3 </span> 
+                     <span class='location'>$location4</span></p>
                     <p class='date'>Posted $date_time</p>
                         <br>
                     <p class='company-name'> $company_name</p>
                     <p class='company-details'>$company_details<a href='jobs.php?id=$id'> Read more>>></a></p>
                 </div>";
+
     }
   } else {
     $str = '<h3 style="text-align: center; color: #008080; margin-top: 1rem;">No job found</h3>
@@ -85,11 +96,11 @@ if (isset($_SESSION['username'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $_SESSION['first_name']; ?> | Dashboard</title>
-    <link rel="stylesheet" href="/legitjobs/css/client_dashboard.css">
+    <link rel="stylesheet" href="/legitjobs/css/side-nav.css">
     <link rel="stylesheet" href="/legitjobs/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/legitjobs/css/side-nav.css">
     <link rel="stylesheet" href="css/chosen.css">
+    <link rel="stylesheet" href="/legitjobs/css/client_dashboard.css">
 
   </head>
 
@@ -103,11 +114,11 @@ if (isset($_SESSION['username'])) {
           </p>
         </div>
         <div class="nav-links">
-          <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
-          <a href="#"><i class="fa fa-wrench" aria-hidden="true"></i>My Resume</a>
-          <a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i>Edit Profile</a>
-          <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>My Jobs</a>
-          <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>About Us</a>
+          <a class="active" href=""><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
+          <a class="link" href="my_resume.php"><i class="fa fa-wrench" aria-hidden="true"></i>My Resume</a>
+          <a class="link" href="edit_profile.php"><i class="fa fa-briefcase" aria-hidden="true"></i>Edit Profile</a>
+          <a class="link" href="my_jobs.php"><i class="fa fa-envelope" aria-hidden="true"></i>My Jobs</a>
+          <a class="link" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>About Us</a>
 
         </div>
       </div>
@@ -126,7 +137,7 @@ if (isset($_SESSION['username'])) {
           <div class="right-nav-link">
             <div class="right-link-container">
               <div class="right-link-links">
-                <a href="#">Jobs</a>
+                <a href="jobs_section.php">Jobs</a>
               </div>
                 <div class="dropdown">
                     <button class="dropbtn"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo $_SESSION['first_name']; ?></button>
@@ -150,7 +161,7 @@ if (isset($_SESSION['username'])) {
             <h2 class="f-name">
               Hi, <?php echo $_SESSION['first_name']; ?>
             </h2>
-            <a href="#">View your profile</a> <a href="update_resume.php">Update your resume now</a>
+            <a href="#">View your profile</a> <a href="update_resume.php">Update your profile!!!</a>
           </div>
 
           <div id="progressbar">
@@ -204,7 +215,10 @@ if (isset($_SESSION['username'])) {
               </button>
             </div>
               <div class="sub-item3">
-                <h3>Hot jobs container</h3>
+                <h3>Featured Jobs</h3>
+                <div id="hotResults">
+                  
+                </div>
               </div>
           </div>
           <div class="item2">
@@ -225,7 +239,7 @@ if (isset($_SESSION['username'])) {
 
 <?php
 } else {
-  header("Location: sign_in.php");
+  header("Location: home.php");
   exit();
 }
 ?>

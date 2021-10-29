@@ -29,7 +29,7 @@ async function setLocation() {
     const {value: formValue } = await Swal.fire({
         showCloseButton: true,
         html: '<div style="padding-top: 2rem;">' +
-        '<h2 style="font-weight: 500; margin-bottom: 1rem; font-size: 17px; color: #008080;">Select your location</h2>'+
+        '<h2 style="font-weight: 500; margin-bottom: 1rem; font-size: 17px; color: #008080;">Set your prefrence</h2>'+
         '<select placeHolder="Select Location" id="swal-input1" style="width: 80%; outline: none; border: 1px solid #000; border-radius: 3px; height: 24px; font-size: 15px; color: grey;">' +
            '<option value="">All Locations</option>'+
            '<option value="Lagos">Lagos</option>'+
@@ -80,7 +80,7 @@ function updateLocation() {
         },
         cache: false,
         success: async function (data) {
-            if(data == 'posted') {
+            if(data === 'posted') {
                 const pending = await Swal.fire({
                     icon: 'success',
                     text: 'Your job prefrence has been saved!'
@@ -89,8 +89,6 @@ function updateLocation() {
                     location.reload();
                     return;
                 }
-            }else {
-                console.log(data);
             }
         },
         error: function (xhr, status, error) {
@@ -99,6 +97,22 @@ function updateLocation() {
 
     })
 }
+
+
+$(document).ready(function () {
+    $.ajax({
+        type: "POST",
+        url: "/legitjobs/engine/handle_pref.php",             
+        dataType: "html", 
+        data: {
+            hot: "yes"
+        },            
+        success: function(data){                   
+            $("#hotResults").html(data); 
+        }
+    })
+});
+
 
 
 

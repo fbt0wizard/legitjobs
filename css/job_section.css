@@ -1,0 +1,195 @@
+@import "/legitjobs/css/basic.css";
+@import "/legitjobs/css/posted_job.css";
+
+body {
+  background-color: #fff;
+}
+.main-body {
+  margin-left: 226px;
+}
+.search-fieldset {
+  margin: 10px;
+  width: max-content;
+  border-radius: 3px;
+  margin-top: 2rem;
+  border: 2px solid #e8e8e8;
+}
+.search-fieldset legend {
+  margin: auto;
+  color: #008080;
+  font-weight: 550;
+}
+.search-flex-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.search-flex-container > div {
+  margin: 10px;
+}
+.search1 label {
+  border: 1px solid #008080;
+  padding: 13px 5px;
+  border-radius: 5px;
+  color: #717171;
+  font-weight: 550;
+  transition: 0.3s;
+}
+
+.search1 label input {
+  height: 37px;
+  width: 244px;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  color: #004848;
+}
+::placeholder {
+  font-size: 17px;
+}
+.search2 label {
+  border: 1px solid #008080;
+  padding: 13px 5px;
+  border-radius: 5px;
+  color: #717171;
+  font-weight: 550;
+  transition: 0.3s;
+}
+.search2 label input {
+  height: 37px;
+  width: 244px;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  color: #004848;
+}
+.search3 button {
+  font-size: 17px;
+  padding: 10px 20px;
+  background-color: #008080;
+  border: 1px solid #008080;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.search3 button:hover {
+  background-color: #fff;
+  color: #008080;
+}
+
+/* styling the live search */
+#down > p {
+  padding-bottom: 4px;
+  font-size: 14px;
+  color: #242424;
+  padding: 6px;
+  border-bottom: 1px solid #bbb;
+  font-weight: 550;
+  cursor: pointer;
+}
+#down > p:hover {
+  background-color: #008080;
+  color: #fff;
+}
+#results {
+  display: none;
+  position: absolute;
+  margin-bottom: 4px;
+  background-color: #fff;
+  border: 1px solid #008080;
+  border-top: none;
+  width: 346px;
+  padding-top: 5px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#down2 > p {
+  padding-bottom: 4px;
+  font-size: 14px;
+  color: #242424;
+  padding: 6px;
+  border-bottom: 1px solid #bbb;
+  font-weight: 550;
+  cursor: pointer;
+}
+#down2 > p:hover {
+  background-color: #008080;
+  color: #fff;
+}
+#loc {
+  display: none;
+  position: absolute;
+  margin-bottom: 4px;
+  background-color: #fff;
+  border: 1px solid #008080;
+  border-top: none;
+  width: 322px;
+  padding-top: 5px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+/* result section style */
+.search-history {
+  width: 56%;
+  text-align: center;
+  margin: 2rem 0;
+}
+.search-head {
+  color: #3a3a3a;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 5px;
+  font-weight: 570;
+}
+.search-keys {
+  display: flex;
+  justify-content: center;
+}
+.search-keys a {
+  color: #2d5757;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 23px;
+  margin: 5px;
+  border: 1px solid #008080;
+}
+.search-keys i {
+  border-left: 1px solid #008080;
+  padding-left: 8px;
+  margin-left: 4px;
+  height: 18px;
+}
+.search-keys a:hover {
+  background-color: rgb(255, 255, 255);
+}
+.loading-bar {
+  display: none;
+  width: 70%;
+  height: 40vh;
+}
+.section-2 {
+  margin: 14px;
+}
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.item1 {
+  min-width: 361px;
+  grid-area: 1 / 2 / 2 / 3;
+}
+.sub-item1 {
+  text-align: center;
+}
+.item2 {
+  grid-area: 1 / 1 / 2 / 2;
+  height: max-content;
+  width: 100%;
+  min-width: 461px;
+}
+.posted-job {
+  width: 84%;
+}

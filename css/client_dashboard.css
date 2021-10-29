@@ -165,10 +165,11 @@ body {
   width: max-content;
   background-color: #008080;
   color: #fff;
+  font-size: 14px;
 }
 .sub-item3 {
   border: 1px solid #008080;
-  height: 250px;
+  height: max-content;
   width: 82%;
   text-align: center;
   padding: 10px;
@@ -178,6 +179,19 @@ body {
   border-radius: 3px;
   max-width: 365px;
   min-width: 300px;
+}
+.hot-income {
+  text-decoration: none;
+  color: #008080;
+  font-size: 14px;
+  line-height: 0;
+}
+.hot-income:hover {
+  color: red;
+}
+#hotResults {
+  margin-top: 5px;
+  line-height: 29px;
 }
 
 @media only screen and (max-width: 858px) {

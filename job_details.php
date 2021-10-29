@@ -47,11 +47,11 @@ if (mysqli_num_rows($result) > 0) {
 
                     <p class='job-details-section'>Job Descibtion:</p>
 
-                    <p class='job-describtion'>$job_describtion</p>
+                    <div class='job-describtion'>$job_describtion</div>
                     
                     <p class='app-method'>Application Method:</p>
 
-                    <p style='line-height: 27px'>$job_methos</p>
+                    <div class='application-method'>$job_methos</div>
                 </div>";
     }
 } else {
@@ -88,6 +88,7 @@ if (mysqli_num_rows($result) > 0) {
                 <a href="index.php">Home</a>
                 <a href="#news">Resume</a>
                 <a href="#news">Blog</a>
+                <a href="post_a_job.php">Post Job</a>
             </div>
             <div class="sign-in">
                 <a href="./sign_in.php">Sign In</a><a href="./sign_up.php">Sign Up</a>

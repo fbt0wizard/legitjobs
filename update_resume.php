@@ -53,7 +53,7 @@ if (isset($_SESSION['username'])) {
                     <div class="right-nav-link">
                         <div class="right-link-container">
                             <div class="right-link-links">
-                                <a href="#">Jobs</a>
+                                <a href="jobs_section.php">Jobs</a>
                             </div>
                             <div class="dropdown">
                                 <button class="dropbtn"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo $_SESSION['first_name']; ?></button>
@@ -121,25 +121,33 @@ if (isset($_SESSION['username'])) {
                             <label for="email">Phone</label> <br>
                             <p class="phone-number"><?php echo $_SESSION['phone'] ?></p>
                         </div>
+                        <div class="add">
+                            <label for="address">Address</label> <br>
+                            <input type="text" id="add" name="add">
+                        </div>
                         <div class="address">
                             <div class="group-set1">
                                 <div class="group1">
-                                    <label for="address">Street Address</label> <br>
-                                    <input type="text" name="Street-address" id="streetAddress">
-                                </div>
-                                <div class="group2">
-                                    <label for="city">City</label> <br>
-                                    <input type="text" name="city" id="city">
+                                    <label>Country</label> <br>
+                                    <select name="country" class="countries" id="countryId">
+                                        <option value="">Select Country</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="group-set2">
                                 <div class="group3">
-                                    <label for="state">State</label> <br>
-                                    <input type="text" name="State" id="state">
+                                    <label>State</label> <br>
+                                    <select name="state" class="states" id="stateId">
+                                        <option value="">Select State</option>
+                                    </select>
                                 </div>
+                            </div>
+                            <div class="group-set3">
                                 <div class="group4">
-                                    <label for="country">Country</label> <br>
-                                    <input type="text" name="country" id="country">
+                                    <label>City</label> <br>
+                                    <select name="city" class="cities" id="cityId">
+                                        <option value="">Select City</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -151,6 +159,9 @@ if (isset($_SESSION['username'])) {
             </div>
         </div>
         </div>
+        <script src="/legitjobs/js/jquery-3.6.0.min.js"></script>
+        <!-- <script src="/legitjobs/js/jquery-min.js"></script> -->
+        <script src="/legitjobs/js/countrystatecity.js"></script>
     </body>
 
     </html>

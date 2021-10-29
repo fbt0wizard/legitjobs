@@ -1,0 +1,43 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+.bubble {
+  animation: expand 0.75s ease-in-out infinite;
+  border-radius: 20px;
+  display: inline-block;
+  transform-origin: center center;
+  margin: 0 3px;
+  width: 20px;
+  height: 20px;
+}
+
+.bubble:nth-child(1) {
+  background: #008080;
+}
+
+.bubble:nth-child(2) {
+  animation-delay: 180ms;
+  background: #008080;
+}
+
+.bubble:nth-child(3) {
+  animation-delay: 360ms;
+  background: #008080;
+}
+
+.bubble:nth-child(4) {
+  animation-delay: 540ms;
+  background: #008080;
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.55);
+  }
+}

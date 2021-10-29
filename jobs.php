@@ -43,15 +43,15 @@ if (mysqli_num_rows($result) > 0) {
               
               <p class='tittle-qualification'>$job_tittle</p>
 
-              <p class='experience'><span class='names'>Experience: </span><a href='#'>$experience $experience_to</a></p>
-              <p class='job_type'><span class='names'>Job Type: </span><a href='#'> $job_type</a></p>
-              <p class='qualification'><span class='names'>Qualification: </span><a href='#'> $qualification</a></p>
-              <p class='job_field'><span class='names'>Job Field: </span><a class='field' href='#'> $job_field</a></p>
+              <p class='experience'><span class='names'>Experience </span><a href='#'>$experience - $experience_to years</a></p>
+              <p class='job_type'><span class='names'>Job Type </span><a href='#'> $job_type</a></p>
+              <p class='qualification'><span class='names'>Qualification </span><a href='#'> $qualification</a></p>
+              <p class='job_field'><span class='names'>Job Field </span><a class='field' href='#'> $job_field</a></p>
 
 
               <p class='job-details-section'>Job Descibtion:</p>
 
-              <p class='job-describtion'>$job_describtion</p>
+              <div class='job-describtion'>$job_describtion</div>
               
               <p class='app-method'>Application Method:</p>
 
@@ -112,7 +112,7 @@ if (mysqli_num_rows($result) > 0) {
           <div class="right-nav-link">
             <div class="right-link-container">
               <div class="right-link-links">
-                <a href="#">Jobs</a>
+                <a href="jobs_section.php">Jobs</a>
               </div>
                 <div class="dropdown">
                     <button class="dropbtn"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo $_SESSION['first_name']; ?></button>

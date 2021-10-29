@@ -4,7 +4,7 @@
 @import "/legitjobs/css/nav.css";
 
 
-/* Styleing Search bar  */
+/* Styling Search bar  */
 
 .search-item1 {
   grid-area: search;
@@ -31,24 +31,30 @@
 .grid-item-search {
   text-align: center;
 }
-
-.grid-item-search input {
-  width: 31%;
+.search-label {
   border: 1px solid #008080;
   border-radius: 3px;
+  background-color: #fff;
+  padding: 1px 4px 9px 6px;
+}
+
+.grid-item-search input {
+  width: 30%;
   font-size: 17px;
   padding: 14px 11px;
   height: 43px;
+  border: none;
+  background: none;
 }
 
 .grid-item-search input:focus {
   outline: none;
-  background-color: #008080;
+  /* background-color: #008080;
   border: none;
-  color: #fff;
+  color: #fff; */
 }
 
-.grid-item-search i {
+.search-label i {
   color: #008080;
   margin: 0px 5px 0px 5px;
   font-size: 32px;
@@ -62,7 +68,7 @@
 }
 
 .search i {
-  padding: 5.5px 20px 9.9px 20px;
+  padding: 7.5px 20px 11.9px 20px;
   font-size: 24px;
   background-color: #008080;
   border: 1px solid #008080;

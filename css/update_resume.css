@@ -9,22 +9,15 @@ body {
     align-items: center;
 }
 
-.tittle, .first-name, .last-name, .email, .phone, .group1, .group2, .group3, .group4 {
+.tittle, .first-name, .last-name, .email, .phone, .group1, .group2, .group3, .group4, .add {
     margin: 13px;
 }
 .first-name, .last-name {
-    width: 33%;
+    width: 43%;
 }
 
-#streetAddress, #state, #city, #country {
-    border: 1px solid #008080;
-    height: 27px;
-    border-radius: 3px;
-    width: 100%;
-    outline: none;
-}
 .group-set1, .group-set2 {
-    width: 41%;
+    width: 33%;
 }
 
 label {
@@ -34,12 +27,15 @@ label {
 .email-address, .phone-number {
     color: #8e8e8e;
     margin-top: 5px;
+    font-size: 14px;
 }
 .form-section {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 1px;
+    background: #f4f8e7;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 3px;
     width: 64%;
     margin-top: 2rem;
     padding: 12px;
+    border-radius: 3px;
 }
 #tittle {
     width: 83px;
@@ -82,4 +78,42 @@ label {
     background-color: #fff;
     color: #008080;
 }
-
+.group1 select {
+    width: 100%;
+    color: #008080;
+    background: none;
+    border: 1px solid #008080;
+    height: 27px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.group3 select {
+    width: 100%;
+    color: #008080;
+    background: none;
+    border: 1px solid #008080;
+    height: 27px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.group4 select {
+    width: 100%;
+    color: #008080;
+    background: none;
+    border: 1px solid #008080;
+    height: 27px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.group-set3 {
+    width: 33%;
+}
+.add input {
+    border: 1px solid #008080;
+    height: 27px;
+    border-radius: 3px;
+    color: #000;
+    width: 50%;
+    padding: 4px;
+    outline: none;
+}
