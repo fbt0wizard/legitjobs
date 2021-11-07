@@ -147,6 +147,10 @@ if (isset($_SESSION['username'])) {
                     OR location1 LIKE '$where' OR location2 LIKE '$where' OR location3 LIKE '$where' 
                     OR location4 LIKE '$where' OR city LIKE '$where') AND (user_close= 'no')
                      ORDER BY id DESC ");
+                }else {
+                    echo '<h3 style="text-align: center; color: #008080; margin-top: 1rem;">No job found</h3>
+                        <br> <p style="text-align: center; color: #464646; font-size: 15px;">Kindly adjust your prefrence</p>';
+                    exit;
                 }
 
                     if (mysqli_num_rows($data_query) > 0) {

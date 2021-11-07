@@ -26,11 +26,12 @@
                     <input type="email" name="email2" id="email2" placeholder="Re-Enter Email Address" oninput="clearError()" required>
                 </div>
                 <div class="password">
-                    <input type="password" oninput="validation()" name="password" id="password" placeholder="Password" required>
-                    <!-- <div class="passerror"><p class="reg-error" id="regError"></p></div> -->
-                    <input type="password" name="password2" id="password2" oninput="passwordInput()" placeholder="Re-Enter Password" required>
-                    <!-- <div class="passerror2"><p class="pass-not" id="passNot"></p></div> -->
-                   <div class="errors"><p class="reg-error" id="regError"></p><p class="pass-not" id="passNot"></p></div>
+                    <label for="password"><input type="password" class="first-entry" oninput="validation()" name="password" id="password" placeholder="Password" required><br><p class="reg-error" id="regError"></p></label>
+
+                    <label for="password2"><input type="password" class="first-entry2" name="password2" id="password2" oninput="passwordInput()" placeholder="Re-Enter Password" required><br><p class="pass-not" id="passNot"></p></label>
+                    
+                    
+                   <!-- <div class="errors"></div> -->
 
                 </div>
                 <div class="phone">
@@ -38,7 +39,7 @@
                     <input id="phone" type="tel" name="phone" placeholder="Phone Number" oninput="clearError()" required>
                 </div>
                 <div class="submit-btn">
-                    <button id="regBtn" name="submit">Submit</button>
+                    <button type="submit" id="regBtn" name="submit">Submit</button>
                 </div>
                 <p class="already">Already have an account? <a href="./sign_in.php">Sign In</a></p>
             </form>
@@ -48,7 +49,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
     <script src="/legitjobs/js/jquery-3.6.0.min.js"></script>
     <script src="/legitjobs/js/sign-up.js"></script>
-    <script src="/legitjobs/js/client_sign_up_ajax.js"></script>
 </body>
 
 </html>

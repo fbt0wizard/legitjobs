@@ -3,6 +3,7 @@
 
 .flex-container > div {
     margin-top: 15vh;
+    min-width: 454px;
 }
 
 .success {
@@ -21,6 +22,10 @@
     margin: -26px auto 2rem auto;
     visibility: hidden;
     transition: 1s;
+}
+
+.password {
+    display: block;
 }
 
 .password i {

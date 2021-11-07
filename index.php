@@ -1,10 +1,14 @@
-<?php 
+<?php
 session_start();
 
 if (isset($_SESSION['username'])) {
   require "engine/db_conn.php";
 
   $email = $_SESSION['email'];
+  $prefirst = $_SESSION['first_name'];
+  $presecond = $_SESSION['last_name'];
+  $first = $prefirst[0];
+  $second = $presecond[0];
 
   $loc_query = mysqli_query($conn, "SELECT * FROM user_data WHERE email= '$email'");
   if (mysqli_num_rows($loc_query) > 0) {
@@ -13,6 +17,7 @@ if (isset($_SESSION['username'])) {
       $pref = $row['location_state'];
       $qualification_pref = $row['qualification'];
       $jobType = $row['job_type'];
+      $profile_pics = $row['profile_pics'];
     }
   }
   $str = '';
@@ -79,7 +84,6 @@ if (isset($_SESSION['username'])) {
                     <p class='company-name'> $company_name</p>
                     <p class='company-details'>$company_details<a href='jobs.php?id=$id'> Read more>>></a></p>
                 </div>";
-
     }
   } else {
     $str = '<h3 style="text-align: center; color: #008080; margin-top: 1rem;">No job found</h3>
@@ -115,9 +119,9 @@ if (isset($_SESSION['username'])) {
         </div>
         <div class="nav-links">
           <a class="active" href=""><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
-          <a class="link" href="my_resume.php"><i class="fa fa-wrench" aria-hidden="true"></i>My Resume</a>
-          <a class="link" href="edit_profile.php"><i class="fa fa-briefcase" aria-hidden="true"></i>Edit Profile</a>
-          <a class="link" href="my_jobs.php"><i class="fa fa-envelope" aria-hidden="true"></i>My Jobs</a>
+          <a class="link" href="my_resume.php"><i class="fa fa-id-card-o" aria-hidden="true"></i>My Resume</a>
+          <a class="link" href="edit_profile.php"><i class="fa fa-user-o" aria-hidden="true"></i>Edit Profile</a>
+          <a class="link" href="my_jobs.php"><i class="fa fa-briefcase" aria-hidden="true"></i>My Jobs</a>
           <a class="link" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>About Us</a>
 
         </div>
@@ -137,25 +141,33 @@ if (isset($_SESSION['username'])) {
           <div class="right-nav-link">
             <div class="right-link-container">
               <div class="right-link-links">
-                <a href="jobs_section.php">Jobs</a>
+                <a href="jobs_section.php">Jobs | search <i class="fa fa-search" aria-hidden="true"></i></a>
               </div>
-                <div class="dropdown">
-                    <button class="dropbtn"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo $_SESSION['first_name']; ?></button>
-                    <div class="dropdown-content">
-                      <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
-                      <a href="/legitjobs/engine/client_logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
-                    </div>
+              <div class="dropdown">
+                <button class="dropbtn"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo $_SESSION['first_name']; ?></button>
+                <div class="dropdown-content">
+                  <a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Account Settings</a>
+                  <a href="/legitjobs/engine/client_logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                 </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="section-1">
         <div class="profile">
-          <h3 class="p-logo">
-            OD
-          </h3>
+          <?php if (strlen($profile_pics) < 4) { ?>
+            <h3 onclick="upload()" class="p-logo" id="profileText">
+              <?php echo $first;
+              echo $second; ?>
+            </h3>
+          <?php } else { ?>
+            <div onclick="upload()" class="img">
+              <img src="<?php echo $profile_pics ?>" alt="">
+            </div>
+          <?php } ?>
         </div>
+
         <div class="prgress">
           <div class="user-name">
             <h2 class="f-name">
@@ -207,19 +219,19 @@ if (isset($_SESSION['username'])) {
               </div>
               <button class="right-links" onclick="setLocation()">
                 <h3 class="update-profile">
-                Set your job preference
+                  Set your job preference
                 </h3>
                 <p class="more-updates">
                   Choose the type of job to be displayed<br> on your dashboard.
                 </p>
               </button>
             </div>
-              <div class="sub-item3">
-                <h3>Featured Jobs</h3>
-                <div id="hotResults">
-                  
-                </div>
+            <div class="sub-item3">
+              <h3>Featured Jobs</h3>
+              <div id="hotResults">
+
               </div>
+            </div>
           </div>
           <div class="item2">
             <?php echo $str; ?>

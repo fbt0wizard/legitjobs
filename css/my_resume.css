@@ -1,0 +1,51 @@
+.resumes {
+    width: 60%;
+    margin: 20px;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 3px;
+}
+.fieldset-upload {
+    margin: 10px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px;
+}
+.legend-upload {
+    margin: auto;
+    color: #008080;
+    font-size: 14px;
+}
+#uploadResume {
+    font-size: 16px;
+    background-color: #008080;
+    border: 1px solid #008080;
+    color: #fff;
+    padding: 15px;
+    border-radius: 3px;
+    margin: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+#uploadResume:hover {
+    color: #008080;
+    background-color: #fff;
+}
+.label-dir {
+    font-size: 12px;
+    color: #595959;
+    margin-left: 1rem;
+}
+.no-resume {
+    font-size: 15px;
+    font-weight: 550;
+    color: #008080;
+}
+.no-resume-details {
+    font-size: 13px;
+    color: #575757;
+}
+.my-resume {
+    text-align: center;
+    margin: 25px;
+}

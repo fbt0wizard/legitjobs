@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/chosen.css">
     <link rel="stylesheet" href="/legitjobs/css/home.css">
     <link rel="stylesheet" href="/legitjobs/css/post_a_job.css">
+
 </head>
 
 <body>
@@ -743,5 +744,8 @@
     <script src="/legitjobs/js/widgEditor.js"></script>
     <script src="/legitjobs/js/chosen.jquery.js" type="text/javascript"></script>
     <script src="/legitjobs/js/init.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/legitjobs/js/dashboard.js"></script>
+    <!-- <script src="/legitjobs/js/chart.min.js"></script> -->
+      <!-- <script src="/legitjobs/js/chart_scr.js"></script> -->
     <script src="/legitjobs/js/app.js"></script>
 </body>

@@ -35,9 +35,9 @@ if (isset($_SESSION['username'])) {
                 </div>
                 <div class="nav-links">
                 <a class="link" href="index.php"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
-                <a class="link" href="#"><i class="fa fa-wrench" aria-hidden="true"></i>My Resume</a>
-                <a class="link" href="#"><i class="fa fa-briefcase" aria-hidden="true"></i>Edit Profile</a>
-                <a class="link" href="#"><i class="fa fa-envelope" aria-hidden="true"></i>My Jobs</a>
+                <a class="link" href="my_resume.php"><i class="fa fa-id-card-o" aria-hidden="true"></i>My Resume</a>
+                <a class="link" href="edit_profile.php"><i class="fa fa-user-o" aria-hidden="true"></i>Edit Profile</a>
+                <a class="link" href="my_jobs.php"><i class="fa fa-briefcase" aria-hidden="true"></i>My Jobs</a>
                 <a class="link" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>About Us</a>
 
                 </div>
@@ -57,7 +57,7 @@ if (isset($_SESSION['username'])) {
                     <div class="right-nav-link">
                         <div class="right-link-container">
                             <div class="right-link-links">
-                                <a href="#">Jobs</a>
+                                <a href="#">Jobs | search <i class="fa fa-search" aria-hidden="true"></i></a>
                             </div>
                             <div class="dropdown">
                                 <button class="dropbtn"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo $_SESSION['first_name']; ?></button>
@@ -132,6 +132,7 @@ if (isset($_SESSION['username'])) {
         <script src="/legitjobs/js/jquery-3.6.0.min.js"></script>
         <script src="/legitjobs/js/sweetalert2.all.min.js"></script>
         <script src="/legitjobs/js/live_search.js"></script>
+        <script src="/legitjobs/js/nav-mobile.js"></script>
 
 
     </body>

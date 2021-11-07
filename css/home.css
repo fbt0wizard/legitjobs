@@ -3,6 +3,9 @@
 @import "/legitjobs/css/posted_job.css";
 @import "/legitjobs/css/nav.css";
 
+body {
+  background-color: #00808033;
+}
 
 /* Styling Search bar  */
 

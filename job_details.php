@@ -49,7 +49,7 @@ if (mysqli_num_rows($result) > 0) {
 
                     <div class='job-describtion'>$job_describtion</div>
                     
-                    <p class='app-method'>Application Method:</p>
+                    <p class='application-method'>Application Method:</p>
 
                     <div class='application-method'>$job_methos</div>
                 </div>";

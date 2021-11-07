@@ -14,10 +14,11 @@ if (isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Track Your Jobs </title>
     <link rel="stylesheet" href="/legitjobs/css/side-nav.css">
+    <link rel="stylesheet" href="/legitjobs/css/basic.css">
     <link rel="stylesheet" href="/legitjobs/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/chosen.css">
-    <link rel="stylesheet" href="/legitjobs/css/client_dashboard.css">
+    <!-- <link rel="stylesheet" href="/legitjobs/css/client_dashboard.css"> -->
 
   </head>
 
@@ -32,9 +33,9 @@ if (isset($_SESSION['username'])) {
         </div>
         <div class="nav-links">
           <a class="link" href="index.php"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
-          <a class="link" href="my_resume.php"><i class="fa fa-wrench" aria-hidden="true"></i>My Resume</a>
-          <a class="link" href="edit_profile.php"><i class="fa fa-briefcase" aria-hidden="true"></i>Edit Profile</a>
-          <a class="active" href=""><i class="fa fa-envelope" aria-hidden="true"></i>My Jobs</a>
+          <a class="link" href="my_resume.php"><i class="fa fa-id-card-o" aria-hidden="true"></i>My Resume</a>
+          <a class="link" href="edit_profile.php"><i class="fa fa-user-o" aria-hidden="true"></i>Edit Profile</a>
+          <a class="active" href=""><i class="fa fa-briefcase" aria-hidden="true"></i>My Jobs</a>
           <a class="link" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>About Us</a>
 
         </div>
@@ -54,7 +55,7 @@ if (isset($_SESSION['username'])) {
           <div class="right-nav-link">
             <div class="right-link-container">
               <div class="right-link-links">
-                <a href="jobs_section.php">Jobs</a>
+                <a href="jobs_section.php">Jobs | search <i class="fa fa-search" aria-hidden="true"></i></a>
               </div>
                 <div class="dropdown">
                     <button class="dropbtn"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo $_SESSION['first_name']; ?></button>
@@ -68,7 +69,7 @@ if (isset($_SESSION['username'])) {
         </div>
       </div>
       <div class="section-1">
-        <div class="profile">
+        <!-- <div class="profile">
           <h3 class="p-logo">
             OD
           </h3>
@@ -76,7 +77,7 @@ if (isset($_SESSION['username'])) {
         <div class="prgress">
           <div class="user-name">
             <h2 class="f-name">
-              Hi, <?php echo $_SESSION['first_name']; ?>
+              Hi, 
             </h2>
             <a href="#">View your profile</a> <a href="update_resume.php">Update your profile!!!</a>
           </div>
@@ -88,7 +89,7 @@ if (isset($_SESSION['username'])) {
             Almost ready... Your profile is <strong class="process">20%</strong> completed.
           </p>
           <p class="complete">It's time to complete your profile for that dream job!</p>
-        </div>
+        </div> -->
       </div>
       <div class="section-2">
         
@@ -98,6 +99,7 @@ if (isset($_SESSION['username'])) {
     <!-- <script src="/legitjobs/js/init.js" type="text/javascript" charset="utf-8"></script> -->
     <script src="/legitjobs/js/jquery-3.6.0.min.js"></script>
     <script src="/legitjobs/js/sweetalert2.all.min.js"></script>
+    <script src="/legitjobs/js/nav-mobile.js"></script>
 
   </body>
 

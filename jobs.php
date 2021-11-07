@@ -29,7 +29,7 @@ if (mysqli_num_rows($result) > 0) {
 
       $str .=
       "<div class='posted-job'>
-      <h3 class='heading'><a href='job_details.php?id=$id'>$heading </a></h3>
+      <h3 class='heading'><a>$job_tittle at $company_name</a></h3>
 
       <p class='location'>Location: $location </p>
       <p class='date'>Posted $date_time</p>
@@ -69,7 +69,7 @@ if (mysqli_num_rows($result) > 0) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $heading ?></title>
+    <title><?php echo $job_tittle; ?> at <?php echo $company_name; ?></title>
     <link rel="stylesheet" href="/legitjobs/css/client_dashboard.css">
     <link rel="stylesheet" href="/legitjobs/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -89,11 +89,11 @@ if (mysqli_num_rows($result) > 0) {
           </p>
         </div>
         <div class="nav-links">
-          <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
-          <a href="#"><i class="fa fa-wrench" aria-hidden="true"></i>My Resume</a>
-          <a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i>Edit Profile</a>
-          <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>My Jobs</a>
-          <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>About Us</a>
+          <a class="link" href="index.php"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
+          <a class="link" href="my_resume.php"><i class="fa fa-id-card-o" aria-hidden="true"></i>My Resume</a>
+          <a class="link" href="edit_profile.php"><i class="fa fa-user-o" aria-hidden="true"></i>Edit Profile</a>
+          <a class="link" href="my_jobs.php"><i class="fa fa-briefcase" aria-hidden="true"></i>My Jobs</a>
+          <a class="link" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i>About Us</a>
 
         </div>
       </div>
@@ -112,7 +112,7 @@ if (mysqli_num_rows($result) > 0) {
           <div class="right-nav-link">
             <div class="right-link-container">
               <div class="right-link-links">
-                <a href="jobs_section.php">Jobs</a>
+                <a href="jobs_section.php">Jobs | search <i class="fa fa-search" aria-hidden="true"></i></a>
               </div>
                 <div class="dropdown">
                     <button class="dropbtn"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo $_SESSION['first_name']; ?></button>
@@ -166,6 +166,7 @@ if (mysqli_num_rows($result) > 0) {
     <script src="/legitjobs/js/jquery-3.6.0.min.js"></script>
     <script src="/legitjobs/js/sweetalert2.all.min.js"></script>
     <script src="js/test.js"></script>
+    <script src="/legitjobs/js/nav-mobile.js"></script>
 
   </body>
 

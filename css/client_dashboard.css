@@ -5,10 +5,6 @@ body {
   background-color: #fff;
 }
 
-.main-body {
-  margin-left: 226px;
-}
-
 .section-1 {
   max-height: 170px;
   padding: 5px;
@@ -30,6 +26,11 @@ body {
   width: 128px;
   margin: 5px;
   margin-right: 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+.p-logo:hover {
+  background-color: #00000070;
 }
 
 .f-name {
@@ -192,6 +193,67 @@ body {
 #hotResults {
   margin-top: 5px;
   line-height: 29px;
+}
+#previewing {
+  width: 200px;
+  border: 1px solid #008080;
+  padding: 5px;
+  margin: 5px;
+  max-height: 208px;
+  object-fit: contain;
+}
+#uploaded {
+  border: 1px solid #008080;
+  padding: 5px;
+  margin: 5px;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #757575;
+}
+#file {
+  color: #fff;
+  padding: 5px;
+  border: 5px solid #008080;
+  background-color: #008080;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #626f7e;
+  margin-left: 0%;
+  width: 73%;
+}
+.pic-label {
+  color: #999;
+  font-size: 14px;
+}
+.no-pics {
+  color: #e1e1e1;
+  font-size: 15px;
+}
+.img img {
+  width: 130px;
+  border-radius: 50%;
+  height: 126px;
+  object-fit: cover;
+  margin: 6px;
+  border: 5px solid #008080;
+  cursor: pointer;
+  object-position: top;
+}
+.img img:hover {
+  opacity: 0.4;
+}
+#defaultBtn {
+  border: none;
+  background: #ff3636;
+  color: #fff;
+  padding: 9px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 3px;
+  margin-top: 8px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 858px) {
