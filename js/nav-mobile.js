@@ -5,6 +5,7 @@ const navSlide = () => {
 
     burger.addEventListener("click",()=>{
         nav.classList.toggle("side-nav-active");
+        $('.sticky-side-nav').css('width', '100%')
     })
 }
 
@@ -16,6 +17,7 @@ const navClose = () => {
 
     close.addEventListener("click",()=>{
         sideNav.classList.toggle("side-nav-active");
+        $('.sticky-side-nav').css('width', '0')
     })
 }
 

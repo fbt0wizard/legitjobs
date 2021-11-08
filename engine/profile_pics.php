@@ -6,6 +6,7 @@ if (isset($_SESSION['username'])) {
 
     if (isset($_FILES["file"]["type"])) {
         $email = $_SESSION['email'];
+        $username = $_SESSION['username'];
 
         $sql = "SELECT profile_pics, picture_name FROM user_data WHERE email='$email'";
 
@@ -34,8 +35,9 @@ if (isset($_SESSION['username'])) {
 
         $file_extension = end($temporary);
 
-        $file_name = $_FILES["file"]["name"];
-        // $file_name = $prod .".". $file_extension;
+        $old_name = $_FILES["file"]["name"];
+        $file_name = "$username.$file_extension";
+        
         $file_location = "/legitjobs/upload/$file_name";
 
         $email = $_SESSION['email'];
@@ -76,6 +78,8 @@ if (isset($_SESSION['username'])) {
                     $sql_update = "UPDATE user_data SET profile_pics ='$file_location', picture_name = '$file_name' WHERE email='$email'";
 
                     if ($conn->query($sql_update) === TRUE) {
+
+                        rename("../upload/$old_name", "../upload/$file_name");
                         echo 'success';
                     } else {
                         echo "Error: " . $sql . "<br>" . $conn->error;

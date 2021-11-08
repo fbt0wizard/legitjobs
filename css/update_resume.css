@@ -69,6 +69,7 @@ body {
     margin: 2rem;
     padding: 12px;
     border-radius: 3px;
+    min-width: 500px;
 }
 #tittle {
     width: 83px;
@@ -226,4 +227,43 @@ body {
 .highest-qualification, .qual-field {
     margin: 15px;
     width: 50%;
+}
+
+@media only screen and (max-width: 569px) {
+    .form-section {
+        min-width: 350px;
+        margin: auto;
+        width: 93%;
+    }
+    .name, .address {
+        display: grid;
+    }
+    .duration {
+        display: grid;
+    }
+    .qualification-section {
+        display: grid;
+    }
+    .group-set1, .group-set2 {
+        width: 100%;
+    }
+    .group-set3 {
+        width: 100%;
+    }
+    #org, #org2, #position, #position2 {
+        width: 100%;
+    }
+    .from, .to {
+        width: 92%;
+        max-width: unset;
+    }
+    .highest-qualification, .qual-field {
+        width: 92%;
+    }
+    .first-name, .last-name {
+        width: 92%;
+    }
+    .add input {
+        width: 100%;
+    }
 }

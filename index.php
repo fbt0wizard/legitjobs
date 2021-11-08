@@ -244,6 +244,7 @@ if (isset($_SESSION['username'])) {
     <script src="/legitjobs/js/jquery-3.6.0.min.js"></script>
     <script src="/legitjobs/js/sweetalert2.all.min.js"></script>
     <script src="js/test.js"></script>
+    <script src="/legitjobs/js/nav-mobile.js"></script>
 
   </body>
 

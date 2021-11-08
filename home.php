@@ -138,7 +138,7 @@ require "engine/db_conn.php";
 
                         $str .=
                             "<div class='posted-job'>
-                                <h3 class='heading'><a href='jobs.php?id=$id'>$job_tittle at $company_name </a></h3>
+                                <h3 class='heading'><a href='job_details.php?id=$id'>$job_tittle at $company_name </a></h3>
         
                                 <p class='location'>Location: $location  
                                 <span class='location'>$location1 </span>

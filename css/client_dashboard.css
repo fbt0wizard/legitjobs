@@ -171,15 +171,15 @@ body {
 .sub-item3 {
   border: 1px solid #008080;
   height: max-content;
-  width: 82%;
+  /* width: 82%; */
   text-align: center;
   padding: 10px;
   float: right;
   position: sticky;
   top: 110px;
   border-radius: 3px;
-  max-width: 365px;
-  min-width: 300px;
+  width: 365px;
+  /* min-width: 300px; */
 }
 .hot-income {
   text-decoration: none;
@@ -269,5 +269,69 @@ body {
   }
   .right-links {
     margin: auto;
+    width: 82%;
+    margin-bottom: 5px;
+  }
+  .sub-item3 {
+    float: none;
+    max-width: none;
+    margin: auto;
+    width: 82.5%;
+  }
+  .item2 {
+    min-width: unset;
+  }
+  .posted-job {
+    min-width: unset;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .filter-heading {
+    width: 100%;
+  }
+  .section-2 {
+    margin: 6px;
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .user-name {
+    display: block;
+  }
+  .user-name a {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+  .f-name {
+    margin-bottom: 5px;
+  }
+  .img img {
+    width: 96px;
+    border-radius: 50%;
+    height: 93px;
+  }
+  .filter {
+    font-size: 10px;
+  }
+  /* .sub-item3 {
+    width: 100%;
+    max-width: none;
+  } */
+}
+
+@media only screen and (max-width: 427px) {
+  .profile-completion {
+    font-size: 11.5px;
+  }
+  .user-name a {
+    font-size: 11px;
+  }
+  #progressbar {
+    width: 229px;
+  }
+  .filter {
+    font-size: 10px;
   }
 }

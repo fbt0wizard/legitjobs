@@ -25,8 +25,7 @@
 .location {
   margin-bottom: 6px;
   color: #686868;
-  font-size: 14px;
-  margin-left: 4px;
+  font-size: 13px;
 }
 .date {
   font-size: 12px;
@@ -175,4 +174,7 @@
 }
 .application-method {
   line-height: 37px;
+}
+
+@media only screen and (max-width: 858px) {
 }
